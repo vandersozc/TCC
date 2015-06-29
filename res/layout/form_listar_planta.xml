@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:stretchColumns="1" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/background" >
+
+        <TextView
+            android:id="@+id/text_nome_form_lista"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ic_action_mais_form_lista"
+            android:contentDescription="@string/text_nome_form_lista"
+            android:text="@string/text_nome_form_lista"
+            android:textColor="@color/verde"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/imput_text_nome_form_lista"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/text_nome_form_lista"
+            android:layout_centerVertical="false"
+            android:layout_toRightOf="@+id/ic_action_mais_form_lista"
+            android:background="@color/background"
+            android:contentDescription="@string/imput_text_nome_form_lista" />
+
+        <ImageView
+            android:id="@+id/ic_action_mais_form_lista"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/ic_action_mais_form_lista"
+            android:src="@drawable/ic_action_mais_form_lista" />
+
+        <TextView
+            android:id="@+id/text_nome_cientifico_form_lista"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_below="@+id/imput_text_nome_form_lista"
+            android:layout_toRightOf="@+id/ic_action_mais_form_lista"
+            android:contentDescription="@string/text_nome_cientifico_form_lista"
+            android:text="@string/text_nome_cientifico_form_lista"
+            android:textColor="@color/verde"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/imput_text_nome_cientifico_form_lista"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_nome_cientifico_form_lista"
+            android:layout_toRightOf="@+id/ic_action_mais_form_lista"
+            android:background="@color/background"
+            android:contentDescription="@string/imput_text_nome_cientifico_form_lista" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

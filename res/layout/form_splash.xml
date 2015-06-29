@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:gravity="center|center"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="false" >
+
+    <TextView
+        android:id="@+id/text_splash_nome_app_form_splash"
+        android:layout_width="260dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/text_nome_form_editar"
+        android:gravity="center"
+        android:shadowColor="@color/cinza"
+        android:shadowDx="-3"
+        android:shadowDy="3"
+        android:shadowRadius="8"
+        android:text="@string/app_name"
+        android:textColor="@color/verde"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBar_form_splash"
+        style="@style/AppBaseTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:fitsSystemWindows="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:max="3000" >
+
+    </ProgressBar>
+</LinearLayout>

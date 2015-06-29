@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/ic_action_menu_novo"
+        android:icon="@drawable/ic_action_menu_novo"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="@string/ic_action_menu_novo">
+    </item>
+    <item
+        android:id="@+id/ic_action_menu_buscar"
+        android:icon="@drawable/ic_action_buscar_branco"
+        android:orderInCategory="101"
+        android:showAsAction="ifRoom"
+        android:title="@string/ic_action_menu_buscar">
+    </item>
+
+</menu>
