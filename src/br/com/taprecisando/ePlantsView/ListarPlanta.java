@@ -89,7 +89,6 @@ public class ListarPlanta extends ListActivity {
 			atualizarLista();
 		}
 	}
-
 	// @Override
 	// protected void onDestroy() {
 	// super.onDestroy();
