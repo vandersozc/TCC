@@ -8,7 +8,7 @@ import android.view.MotionEvent;
 
 public class Splash extends Activity {
 	private Thread SplashThread;
-	private boolean Click_touch = false;
+	private boolean clickTela = false;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,12 @@ public class Splash extends Activity {
 				try {
 					synchronized (this) {
 						wait(3000);
-						Click_touch = true;
+						clickTela = true;
 					}
 				} catch (InterruptedException ex) {
 				}
 
-				if (Click_touch) {
+				if (clickTela) {
 					finish();
 					overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 					Intent intent = new Intent();
@@ -36,7 +36,6 @@ public class Splash extends Activity {
 				}
 			}
 		};
-
 		SplashThread.start();
 	}
 
@@ -46,13 +45,11 @@ public class Splash extends Activity {
 		SplashThread.interrupt();
 	}
 
-	/* Se clicar na tela abre a tela principal */
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		if (event.getAction() == MotionEvent.ACTION_DOWN) {
 			synchronized (SplashThread) {
-
-				Click_touch = true;
+				clickTela = true;
 				SplashThread.notifyAll();
 			}
 		}
