@@ -13,8 +13,8 @@ public class Sobre extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.form_sobre);
 
-		Button btSobre = (Button) findViewById(R.id.ic_action_botaoOK_form_sobre);
-		btSobre.setOnClickListener(new OnClickListener() {
+		Button botaoSobre = (Button) findViewById(R.id.ic_action_botaoOK_form_sobre);
+		botaoSobre.setOnClickListener(new OnClickListener() {
 			public void onClick(View view) {
 				finish();
 			}

@@ -1,4 +1,4 @@
-package br.com.taprecisando.ePlantsController;
+package br.com.taprecisando.ePlantsModel;
 
 import android.content.ContentUris;
 import android.net.Uri;

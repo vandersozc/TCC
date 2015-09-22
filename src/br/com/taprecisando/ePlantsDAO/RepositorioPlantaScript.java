@@ -113,7 +113,6 @@ public class RepositorioPlantaScript extends RepositorioPlanta {
 				RepositorioPlantaScript.VERSAO_BANCO,
 				RepositorioPlantaScript.SCRIPT_DATABASE_CREATE,
 				RepositorioPlantaScript.SCRIPT_DATABASE_DELETE);
-		// abre o banco no modo escrita para poder alterar também
 		db = dbHelper.getWritableDatabase();
 	}
 	// Fecha o banco

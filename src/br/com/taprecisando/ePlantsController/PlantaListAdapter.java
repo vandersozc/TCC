@@ -1,6 +1,8 @@
 package br.com.taprecisando.ePlantsController;
 
 import java.util.List;
+
+import br.com.taprecisando.ePlantsModel.Planta;
 import br.com.taprecisando.ePlantsView.R;
 import android.annotation.SuppressLint;
 import android.content.Context;

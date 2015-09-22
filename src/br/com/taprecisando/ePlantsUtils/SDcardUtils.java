@@ -1,4 +1,4 @@
-package br.com.taprecisando.ePlantsExport;
+package br.com.taprecisando.ePlantsUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,15 +9,11 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 
 @SuppressLint("SdCardPath")
-public class SdCardUtils {
+public class SDcardUtils {
 
-	private static final String TAG = SdCardUtils.class.getName();
+	private static final String TAG = SDcardUtils.class.getName();
 
 	public static File getSdCardFile(String novaPasta, String arquivo) {
-
-		//File sdcard = Environment.getExternalStorageDirectory();
-		//File diretorio = new File(sdcard, novaPasta);
-		
 		File diretorio = new File("/mnt/sdcard", novaPasta);
 
 		if (!diretorio.exists()) {
@@ -27,10 +23,10 @@ public class SdCardUtils {
 		return file;	
 	}
 
-	public static File writeToSdcard(File f, byte[] bytes) {
+	public static File writeToSdcard(File arquivo, byte[] bytes) {
 		try {
-			if (f != null) {
-				FileOutputStream out = new FileOutputStream(f);
+			if (arquivo != null) {
+				FileOutputStream out = new FileOutputStream(arquivo);
 				out.write(bytes);
 				out.close();
 			}
@@ -40,7 +36,7 @@ public class SdCardUtils {
 		} catch (IOException e) {
 			Log.e(TAG, e.getMessage(), e);
 		}
-		return f;
+		return arquivo;
 	}
 
 }

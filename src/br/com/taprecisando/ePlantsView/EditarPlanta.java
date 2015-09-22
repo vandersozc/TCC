@@ -9,22 +9,20 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
-import br.com.taprecisando.ePlantsController.Mask;
-import br.com.taprecisando.ePlantsController.Planta;
-import br.com.taprecisando.ePlantsController.Planta.Plantas;
 import br.com.taprecisando.ePlantsDAO.RepositorioPlanta;
 import br.com.taprecisando.ePlantsDAO.RepositorioPlantaScript;
-import br.com.taprecisando.ePlantsExport.MontaArquivo;
-import br.com.taprecisando.ePlantsExport.SdCardUtils;
+import br.com.taprecisando.ePlantsExport.MontaArquivoExportacao;
+import br.com.taprecisando.ePlantsModel.Planta;
+import br.com.taprecisando.ePlantsModel.Planta.Plantas;
+import br.com.taprecisando.ePlantsUtils.ConexaoUtils;
+import br.com.taprecisando.ePlantsUtils.MascaraUtils;
+import br.com.taprecisando.ePlantsUtils.SDcardUtils;
 import br.com.taprecisando.ePlantsView.R;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -40,16 +38,16 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 @SuppressLint("SimpleDateFormat")
-public class EditarPlanta extends Activity {
+public class EditarPlanta extends ConexaoUtils {
 
 	private Long id;
 	private EditText campoNome;
 	private EditText campoCientifico;
 	private EditText campoFamilia;
 	private EditText campoUtiliza;
-	private EditText campoLocal_coleta;
+	private EditText campoLocalColeta;
 	private EditText campoColetor;
-	private EditText campoData_coleta;
+	private EditText campoDataColeta;
 	private EditText campoDeterminador;
 	private EditText campoFormacaoVegetal;
 	private EditText campoObservacao;
@@ -75,50 +73,45 @@ public class EditarPlanta extends Activity {
 		campoCientifico = (EditText) findViewById(R.id.imput_text_nome_cientifico_form_editar);
 		campoFamilia = (EditText) findViewById(R.id.imput_text_familia_form_editar);
 		campoUtiliza = (EditText) findViewById(R.id.imput_text_utilizacao_form_editar);
-		campoLocal_coleta = (EditText) findViewById(R.id.imput_text_local_coleta_form_editar);
+		campoLocalColeta = (EditText) findViewById(R.id.imput_text_local_coleta_form_editar);
 		campoColetor = (EditText) findViewById(R.id.imput_text_coletor_form_editar);
-		campoData_coleta = (EditText) findViewById(R.id.imput_text_data_coleta_form_editar);
+		campoDataColeta = (EditText) findViewById(R.id.imput_text_data_coleta_form_editar);
 		campoDeterminador = (EditText) findViewById(R.id.imput_text_determinador_form_editar);
 		campoFormacaoVegetal = (EditText) findViewById(R.id.imput_text_formacao_vegetal_form_editar);
 		campoObservacao = (EditText) findViewById(R.id.imput_text_observacao_form_editar);
-		
 		id = null;
 		
-		//Máscara
-		campoData_coleta.addTextChangedListener(Mask.insert("##/##/####", campoData_coleta));
-		// Seta a data atual ao inserir
+		campoDataColeta.addTextChangedListener(MascaraUtils.insert("##/##/####", campoDataColeta));
+		
 		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-		campoData_coleta.setText(format.format(new Date()));		
+		campoDataColeta.setText(format.format(new Date()));		
 
 		Bundle extras = getIntent().getExtras();
 
 		if (extras != null) {
 			id = extras.getLong(Plantas._ID);
-
 			if (id != null) {
 				Planta p = buscarPlanta(id);
 				campoNome.setText(p.nome);
 				campoCientifico.setText(p.cientifico);
 				campoFamilia.setText(p.familia);
 				campoUtiliza.setText(p.utiliza);
-				campoLocal_coleta.setText(p.local_coleta);
+				campoLocalColeta.setText(p.local_coleta);
 				campoColetor.setText(p.coletor);
-				campoData_coleta.setText(p.data_coleta);
+				campoDataColeta.setText(p.data_coleta);
 				campoDeterminador.setText(p.determinador);
 				campoFormacaoVegetal.setText(p.formacaoVegetal);
 				campoObservacao.setText(p.observacao);
-				
 			}
 		}
 
-		// Evento que chama o método mostraImagem(), para abrir o Google imagens.
-		ImageButton btImagem = (ImageButton) findViewById(R.id.ic_action_foto_form_editar);
-		btImagem.setOnClickListener(new View.OnClickListener() {
+		ImageButton botaoGoogleImagem = (ImageButton) findViewById(R.id.ic_action_foto_form_editar);
+		botaoGoogleImagem.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View view) {
-				if (testConnection()) {
-					mostraImagem();
+				if (isConexaoValida()) {
+					mostraImagemGoogle();
 				} else {
 					AlertDialog.Builder alerta = new AlertDialog.Builder(EditarPlanta.this);
 					alerta.setTitle(R.string.msg_erro); //Msg: Erro!
@@ -137,28 +130,26 @@ public class EditarPlanta extends Activity {
 			}
 		});
 
-		// Evento do botão cancelar ou voltar
-		ImageButton btCancelar = (ImageButton) findViewById(R.id.ic_action_cancelar_form_editar);
-		btCancelar.setOnClickListener(new OnClickListener() {
+		ImageButton botaoCancelar = (ImageButton) findViewById(R.id.ic_action_cancelar_form_editar);
+		botaoCancelar.setOnClickListener(new OnClickListener() {
 			public void onClick(View view) {
 				setResult(RESULT_CANCELED);
 				finish();
 			}
 		});
 
-		// Evento do botão Salvar, chama o método Salvar()
-		ImageButton btSalvar = (ImageButton) findViewById(R.id.ic_action_salvar_form_editar);
-		btSalvar.setOnClickListener(new OnClickListener() {
+		ImageButton botaoSalvar = (ImageButton) findViewById(R.id.ic_action_salvar_form_editar);
+		botaoSalvar.setOnClickListener(new OnClickListener() {
 			public void onClick(View view) {
 				salvar();
 			}
 		});
 
-		ImageButton btExcluir = (ImageButton) findViewById(R.id.ic_action_excluir_form_editar);
+		ImageButton botaoExcluir = (ImageButton) findViewById(R.id.ic_action_excluir_form_editar);
 		if (id == null) {
-			btExcluir.setVisibility(View.INVISIBLE);
+			botaoExcluir.setVisibility(View.INVISIBLE);
 		} else {
-			btExcluir.setOnClickListener(new OnClickListener() {
+			botaoExcluir.setOnClickListener(new OnClickListener() {
 				public void onClick(View view) {
 					excluir();
 					//Msg: Exemplar excluído com sucesso!
@@ -168,7 +159,6 @@ public class EditarPlanta extends Activity {
 		}
 	}
 
-	/*-----------------------Criação do Menu ----------------------------------------*/
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.editar_planta, menu);
 		return true;
@@ -181,9 +171,9 @@ public class EditarPlanta extends Activity {
 		planta.cientifico = 	 campoCientifico.getText().toString().trim();
 		planta.familia = 	 	 campoFamilia.getText().toString().trim();
 		planta.utiliza = 		 campoUtiliza.getText().toString().trim();
-		planta.local_coleta =	 campoLocal_coleta.getText().toString().trim();
+		planta.local_coleta =	 campoLocalColeta.getText().toString().trim();
 		planta.coletor = 	 	 campoColetor.getText().toString().trim();
-		planta.data_coleta = 	 campoData_coleta.getText().toString().trim();
+		planta.data_coleta = 	 campoDataColeta.getText().toString().trim();
 		planta.determinador = 	 campoDeterminador.getText().toString().trim();
 		planta.formacaoVegetal = campoFormacaoVegetal.getText().toString().trim();
 		planta.observacao = 	 campoObservacao.getText().toString().trim();
@@ -192,14 +182,11 @@ public class EditarPlanta extends Activity {
 			case R.id.ic_action_export:
 	
 				if (planta.nome.equals("")) {
-					AlertDialog.Builder alerta = new AlertDialog.Builder(
-							EditarPlanta.this);
+					AlertDialog.Builder alerta = new AlertDialog.Builder(EditarPlanta.this);
 					alerta.setTitle(R.string.msg_erro); //Erro!
 					//Msg: Obrigatório informar o nome comum da planta para a exportação!
 					alerta.setMessage(R.string.msg04_form_editar);
-					alerta.setPositiveButton("OK",
-							new DialogInterface.OnClickListener() {
-	
+					alerta.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
 										int whichButton) {
 								}
@@ -243,28 +230,24 @@ public class EditarPlanta extends Activity {
 		
 	}
 	
-
-	// Método para salvar planta no banco de dados
 	public void salvar() {
 		Planta planta = new Planta();
 
 		if (id != null) {
-			// É uma atualização
 			planta.id = id;
 		}
 		planta.nome = campoNome.getText().toString().trim();
 		planta.cientifico = campoCientifico.getText().toString().trim();
 		planta.familia = campoFamilia.getText().toString().trim();
 		planta.utiliza = campoUtiliza.getText().toString().trim();
-		planta.local_coleta = campoLocal_coleta.getText().toString().trim();
+		planta.local_coleta = campoLocalColeta.getText().toString().trim();
 		planta.coletor = campoColetor.getText().toString().trim();
-		planta.data_coleta = campoData_coleta.getText().toString().trim();
+		planta.data_coleta = campoDataColeta.getText().toString().trim();
 		planta.determinador = campoDeterminador.getText().toString().trim();
 		planta.formacaoVegetal = campoFormacaoVegetal.getText().toString().trim();
 		planta.observacao = campoObservacao.getText().toString().trim();
 		
 		if (planta.nome.equals("")) {
-			
 			AlertDialog.Builder alerta = new AlertDialog.Builder(EditarPlanta.this);
 			alerta.setTitle(R.string.msg_erro); //Msg: Erro!
 			//Msg: Por favor! informe o nome da planta antes de gravar.
@@ -291,25 +274,22 @@ public class EditarPlanta extends Activity {
 			//Msg: Algumas informações importantes referente a planta não foram informadas!
 			Toast.makeText(EditarPlanta.this,R.string.msg08_form_editar,Toast.LENGTH_LONG).show();
 		}
-		// Após qualquer inserção retorna para a lista
 		salvarPlanta(planta);
 		setResult(RESULT_OK, new Intent());
 		finish();
 	}
 
-	// Metodo para salvar arquivo no SDCard
 	protected void salvarSdCard() {
-		
 		Planta planta = new Planta();
-		MontaArquivo arq = new MontaArquivo(); 
+		MontaArquivoExportacao arq = new MontaArquivoExportacao(); 
 		
 		planta.nome = campoNome.getText().toString().trim();
 		planta.cientifico = campoCientifico.getText().toString().trim();
 		planta.familia = campoFamilia.getText().toString().trim();
 		planta.utiliza = campoUtiliza.getText().toString().trim();
-		planta.local_coleta = campoLocal_coleta.getText().toString().trim();
+		planta.local_coleta = campoLocalColeta.getText().toString().trim();
 		planta.coletor = campoColetor.getText().toString().trim();
-		planta.data_coleta = campoData_coleta.getText().toString().trim();
+		planta.data_coleta = campoDataColeta.getText().toString().trim();
 		planta.determinador = campoDeterminador.getText().toString().trim();
 		planta.formacaoVegetal = campoFormacaoVegetal.getText().toString().trim();
 		planta.observacao = campoObservacao.getText().toString().trim();
@@ -330,7 +310,7 @@ public class EditarPlanta extends Activity {
 		String NomeArquivo = strBuilder.toString();
 
 		try {
-			File f = SdCardUtils.getSdCardFile(PASTA, NomeArquivo);
+			File f = SDcardUtils.getSdCardFile(PASTA, NomeArquivo);
 			FileOutputStream out = new FileOutputStream(f, true);
 			
 			out.write("\n".getBytes());
@@ -365,20 +345,7 @@ public class EditarPlanta extends Activity {
 		// finish();
 	}
 	
-	// Método verifica se possui conexão com a internet
-	private boolean testConnection() {
-		ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-		if (conectivtyManager.getActiveNetworkInfo() != null
-				&& conectivtyManager.getActiveNetworkInfo().isAvailable()
-				&& conectivtyManager.getActiveNetworkInfo().isConnected()) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	// Método para mostrar imagens do Google Imagens
-	public void mostraImagem() {
+	public void mostraImagemGoogle() {
 		Planta planta = new Planta();
 		planta.nome = campoNome.getText().toString().trim();
 
@@ -419,19 +386,15 @@ public class EditarPlanta extends Activity {
 		finish();
 	}
 
-	// Buscar a planta pelo id
 	protected Planta buscarPlanta(long id) {
 		return EditarPlanta.repositorio.buscarPlanta(id);
 	}
 
-	// Salvar a planta
 	protected void salvarPlanta(Planta planta) {
 		EditarPlanta.repositorio.salvar(planta);
 	}
 
-	// Excluir a planta
 	protected void excluirPlanta(long id) {
 		EditarPlanta.repositorio.deletar(id);
 	}
-
 }

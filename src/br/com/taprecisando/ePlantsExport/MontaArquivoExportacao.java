@@ -5,7 +5,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 @SuppressLint("SimpleDateFormat")
-public class MontaArquivo {
+public class MontaArquivoExportacao {
 
 	private String texto;
 	private String quebraDupla = "\n\n";

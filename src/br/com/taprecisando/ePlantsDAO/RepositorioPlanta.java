@@ -3,8 +3,8 @@ package br.com.taprecisando.ePlantsDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.taprecisando.ePlantsController.Planta;
-import br.com.taprecisando.ePlantsController.Planta.Plantas;
+import br.com.taprecisando.ePlantsModel.Planta;
+import br.com.taprecisando.ePlantsModel.Planta.Plantas;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -31,21 +31,16 @@ public class RepositorioPlanta {
 	public RepositorioPlanta() {
 	}
 
-	// Salva/insere/atualiza
 	public long salvar(Planta planta) {
 		long id = planta.id;
-
 		if (id != 0) {
 			atualizar(planta);
 		} else {
-			// Insere novo
 			id = inserir(planta);
 		}
-
 		return id;
 	}
 
-	// Insere uma nova planta
 	public long inserir(Planta planta) {
 		ContentValues values = new ContentValues();
 		values.put(Plantas.NOME, planta.nome);
@@ -63,16 +58,13 @@ public class RepositorioPlanta {
 		return id;
 	}
 
-	// Insere uma nova planta
 	public long inserir(ContentValues valores) {
 		long id = db.insert(NOME_TABELA, "", valores);
 		return id;
 	}
 
-	// Atualiza a planta no banco. O id da planta é utilizado.
 	public int atualizar(Planta planta) {
-		ContentValues values = new ContentValues();
-		
+		ContentValues values = new ContentValues();		
 		values.put(Plantas.NOME, planta.nome);
 		values.put(Plantas.CIENTIFICO, planta.cientifico);
 		values.put(Plantas.FAMILIA, planta.familia);
@@ -85,17 +77,13 @@ public class RepositorioPlanta {
 		values.put(Plantas.OBSERVACAO, planta.observacao);
 
 		String _id = String.valueOf(planta.id);
-
 		String where = Plantas._ID + "=?";
 		String[] whereArgs = new String[] { _id };
 
 		int count = atualizar(values, where, whereArgs);
-
 		return count;
 	}
 
-	// Atualiza a planta com os valores abaixo
-	// A cláusula where é utilizada para identificar a planta a ser atualizado
 	public int atualizar(ContentValues valores, String where, String[] whereArgs) {
 		int count = db.update(NOME_TABELA, valores, where, whereArgs);
 		
@@ -103,15 +91,12 @@ public class RepositorioPlanta {
 		return count;
 	}
 
-	// Deleta a planta com o id fornecido
 	public int deletar(long id) {
 		String where = Plantas._ID + "=?";
-
 		String _id = String.valueOf(id);
 		String[] whereArgs = new String[] { _id };
 
 		int count = deletar(where, whereArgs);
-
 		return count;
 	}
 
@@ -122,16 +107,12 @@ public class RepositorioPlanta {
 		return count;
 	}
 
-	// Busca a planta pelo id
 	public Planta buscarPlanta(long id) {
-		// select * from planta where _id=?
-		Cursor c = db.query(true, NOME_TABELA, Planta.colunas, Plantas._ID + "=" + id,null,null,null,null,null);
+		Cursor c = db.query(true, NOME_TABELA, Planta.colunas, Plantas._ID
+				+ "=" + id, null, null, null, null, null);
 
 		if (c.getCount() > 0) {
-
-			// Posicinoa no primeiro elemento do cursor
 			c.moveToFirst();
-
 			Planta planta = new Planta();
 
 			planta.id = 			 c.getLong(0);
@@ -145,10 +126,8 @@ public class RepositorioPlanta {
 			planta.determinador = 	 c.getString(8);
 			planta.formacaoVegetal = c.getString(9);
 			planta.observacao = 	 c.getString(10);
-
 			return planta;
 		}
-
 		return null;
 	}
 
@@ -207,14 +186,13 @@ public class RepositorioPlanta {
 	}
 
 	// Busca a planta pelo nome "select * from planta where nome=?"
-	public Planta buscarPlantaPorNome(String nome) {
+	public Planta buscarPlantaPeloNome(String nomePlanta) {
 		
 		Planta planta = null;
 
 		try {
 			// Idem a: SELECT _id,nome,cientifico,familia, utiliza from planta where nome = ?
-			Cursor busca = db.query(NOME_TABELA, Planta.colunas, Plantas.NOME + "='" + nome + "'", null, null, null, null, null);
-			// Se encontrou...
+			Cursor busca = db.query(NOME_TABELA, Planta.colunas, Plantas.NOME + "='" + nomePlanta + "'", null, null, null, null, null);
 			if (busca.moveToNext()) {
 
 				planta = new Planta();

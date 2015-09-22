@@ -1,9 +1,9 @@
 package br.com.taprecisando.ePlantsView;
 
-import br.com.taprecisando.ePlantsController.Mask;
-import br.com.taprecisando.ePlantsController.Planta;
 import br.com.taprecisando.ePlantsDAO.RepositorioPlanta;
 import br.com.taprecisando.ePlantsDAO.RepositorioPlantaScript;
+import br.com.taprecisando.ePlantsModel.Planta;
+import br.com.taprecisando.ePlantsUtils.MascaraUtils;
 import br.com.taprecisando.ePlantsView.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -23,9 +23,9 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 	private EditText campoCientifico;
 	private EditText campoFamilia;
 	private EditText campoUtiliza;
-	private EditText campoLocal_coleta;
+	private EditText campoLocalColeta;
 	private EditText campoColetor;
-	private EditText campoData_coleta;
+	private EditText campoDataColeta;
 	private EditText campoDeterminador;
 	private EditText campoFormacaoVegetal;
 	private EditText campoObservacao;
@@ -47,22 +47,20 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 		campoCientifico =      (EditText) findViewById(R.id.imput_text_nome_cientifico_form_buscar);
 		campoFamilia =         (EditText) findViewById(R.id.imput_text_familia_form_buscar);
 		campoUtiliza =         (EditText) findViewById(R.id.imput_text_utilizacao_form_buscar);
-		campoLocal_coleta =    (EditText) findViewById(R.id.imput_text_local_coleta_form_buscar);
+		campoLocalColeta =     (EditText) findViewById(R.id.imput_text_local_coleta_form_buscar);
 		campoColetor = 	 	   (EditText) findViewById(R.id.imput_text_coletor_form_buscar);
-		campoData_coleta = 	   (EditText) findViewById(R.id.imput_text_data_coleta_form_buscar);
+		campoDataColeta = 	   (EditText) findViewById(R.id.imput_text_data_coleta_form_buscar);
 		campoDeterminador =    (EditText) findViewById(R.id.imput_text_determinador_form_buscar);
 		campoFormacaoVegetal = (EditText) findViewById(R.id.imput_text_formacao_vegetal_form_buscar);
 		campoObservacao =      (EditText) findViewById(R.id.imput_text_observacao_form_buscar);
 		
-		//Máscara da data
-		campoData_coleta.addTextChangedListener(Mask.insert("##/##/####", campoData_coleta));
+		campoDataColeta.addTextChangedListener(MascaraUtils.insert("##/##/####", campoDataColeta));
 		
-		ImageButton btBuscar = (ImageButton) findViewById(R.id.ic_action_buscar_form_buscar);
-		btBuscar.setOnClickListener(this);
+		ImageButton botaoBuscar = (ImageButton) findViewById(R.id.ic_action_buscar_form_buscar);
+		botaoBuscar.setOnClickListener(this);
 
-		//Evento do botão cancelar ou voltar
-		ImageButton btCancelar = (ImageButton) findViewById(R.id.ic_action_cancelar_form_buscar);
-		btCancelar.setOnClickListener(new OnClickListener() {
+		ImageButton botaoCancelar = (ImageButton) findViewById(R.id.ic_action_cancelar_form_buscar);
+		botaoCancelar.setOnClickListener(new OnClickListener() {
 			public void onClick(View view) {
 				setResult(RESULT_CANCELED);
 				finish();
@@ -78,9 +76,8 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 	}
 
 	public void onClick(View view) {
-		
 		String nomePlanta = campoNome.getText().toString();
-		Planta planta = buscarPlanta(nomePlanta);
+		Planta planta = getPlantaPeloNome(nomePlanta);
 		
 		if (nomePlanta.equals("")){
 			AlertDialog.Builder alerta = new AlertDialog.Builder(BuscarPlanta.this);
@@ -98,9 +95,9 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 			campoCientifico.setText(planta.cientifico);
 			campoFamilia.setText(planta.familia);
 			campoUtiliza.setText(planta.utiliza);
-			campoLocal_coleta.setText(planta.local_coleta);
+			campoLocalColeta.setText(planta.local_coleta);
 			campoColetor.setText(planta.coletor);
-			campoData_coleta.setText(planta.data_coleta);
+			campoDataColeta.setText(planta.data_coleta);
 			campoDeterminador.setText(planta.determinador);
 			campoFormacaoVegetal.setText(planta.formacaoVegetal);
 			campoObservacao.setText(planta.observacao);
@@ -109,9 +106,9 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 			campoCientifico.setText("");
 			campoFamilia.setText("");
 			campoUtiliza.setText("");
-			campoLocal_coleta.setText("");
+			campoLocalColeta.setText("");
 			campoColetor.setText("");
-			campoData_coleta.setText("");
+			campoDataColeta.setText("");
 			campoDeterminador.setText("");
 			campoFormacaoVegetal.setText("");
 			campoObservacao.setText("");
@@ -121,9 +118,8 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 		}
 	}
 
-	// Busca uma planta pelo nome
-	protected Planta buscarPlanta(String nomePlanta) {
-		Planta planta = BuscarPlanta.repositorio.buscarPlantaPorNome(nomePlanta);
+	protected Planta getPlantaPeloNome(String nomePlanta) {
+		Planta planta = BuscarPlanta.repositorio.buscarPlantaPeloNome(nomePlanta);
 		return planta;
 	}
 }

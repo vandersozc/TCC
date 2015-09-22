@@ -2,11 +2,11 @@ package br.com.taprecisando.ePlantsView;
 
 import java.util.List;
 
-import br.com.taprecisando.ePlantsController.Planta;
 import br.com.taprecisando.ePlantsController.PlantaListAdapter;
-import br.com.taprecisando.ePlantsController.Planta.Plantas;
 import br.com.taprecisando.ePlantsDAO.RepositorioPlanta;
 import br.com.taprecisando.ePlantsDAO.RepositorioPlantaScript;
+import br.com.taprecisando.ePlantsModel.Planta;
+import br.com.taprecisando.ePlantsModel.Planta.Plantas;
 import br.com.taprecisando.ePlantsView.R;
 import android.app.ListActivity;
 import android.content.Intent;
