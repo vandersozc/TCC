@@ -62,11 +62,9 @@ public class EditarPlanta extends ConexaoUtils {
 	protected void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		
-		//Instância do banco de dados
 		repositorio = new RepositorioPlantaScript(this);
 		setContentView(R.layout.form_editar_planta);
 
-		// Desabilita subida automática do teclado
 		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 		
 		campoNome = (EditText) findViewById(R.id.imput_text_nome_form_editar);
@@ -113,18 +111,16 @@ public class EditarPlanta extends ConexaoUtils {
 				if (isConexaoValida()) {
 					mostraImagemGoogle();
 				} else {
-					AlertDialog.Builder alerta = new AlertDialog.Builder(EditarPlanta.this);
-					alerta.setTitle(R.string.msg_erro); //Msg: Erro!
-					//Msg: Você não está conectado a internet!Por favor tente mais tarde.
-					alerta.setMessage(R.string.msg01_form_editar);
-					alerta.setPositiveButton("OK",new DialogInterface.OnClickListener() {
-
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									// EditarPlanta.this.finish();
-								}
-							});
-					alerta.show();
+					AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
+					mensagem.setTitle(R.string.msg_erro); //Msg: Erro!
+					mensagem.setMessage(R.string.msg01_form_editar);//Msg: Você não está conectado a internet!Por favor tente mais tarde.
+					mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,
+								int whichButton) {
+							// EditarPlanta.this.finish();
+						}
+					});
+					mensagem.show();
 					return;
 				}
 			}
@@ -152,8 +148,7 @@ public class EditarPlanta extends ConexaoUtils {
 			botaoExcluir.setOnClickListener(new OnClickListener() {
 				public void onClick(View view) {
 					excluir();
-					//Msg: Exemplar excluído com sucesso!
-					Toast.makeText(EditarPlanta.this, R.string.msg03_form_editar, Toast.LENGTH_SHORT).show();
+					Toast.makeText(EditarPlanta.this, R.string.msg03_form_editar, Toast.LENGTH_SHORT).show();//Msg: Exemplar excluído com sucesso!
 				}
 			});
 		}
@@ -182,29 +177,26 @@ public class EditarPlanta extends ConexaoUtils {
 			case R.id.ic_action_export:
 	
 				if (planta.nome.equals("")) {
-					AlertDialog.Builder alerta = new AlertDialog.Builder(EditarPlanta.this);
-					alerta.setTitle(R.string.msg_erro); //Erro!
-					//Msg: Obrigatório informar o nome comum da planta para a exportação!
-					alerta.setMessage(R.string.msg04_form_editar);
-					alerta.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+					AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
+					mensagem.setTitle(R.string.msg_erro); //Erro!
+					mensagem.setMessage(R.string.msg04_form_editar);//Msg: Obrigatório informar o nome comum da planta para a exportação!
+					mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
 										int whichButton) {
 								}
 							});
-					alerta.show();
+					mensagem.show();
 					return false;
 				} else {
-	
 					ArrayList<String> itens = new ArrayList<String>();
 					itens.add(".txt");
 					itens.add(".csv");
 	
 					ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.xml.alerta, itens);
 	
-					final AlertDialog.Builder alerta = new AlertDialog.Builder(EditarPlanta.this);
-					alerta.setTitle(R.string.msg05_form_editar); //Msg: Escolha o formado de exportação
-	
-					alerta.setSingleChoiceItems(adapter, 0,new DialogInterface.OnClickListener() {
+					final AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
+					mensagem.setTitle(R.string.msg05_form_editar); //Msg: Escolha o formado de exportação
+					mensagem.setSingleChoiceItems(adapter, 0,new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface arg0, int arg1) {
 									switch (arg1) {
 										case 0:
@@ -216,12 +208,11 @@ public class EditarPlanta extends ConexaoUtils {
 										default:
 											break;
 									}
-									
 									arg0.cancel();
 									salvarSdCard();
 								}
 							});
-					alerta.show();
+					mensagem.show();
 				}
 				return true;
 			default:
@@ -229,13 +220,10 @@ public class EditarPlanta extends ConexaoUtils {
 		}
 		
 	}
-	
 	public void salvar() {
 		Planta planta = new Planta();
 
-		if (id != null) {
-			planta.id = id;
-		}
+		if (id != null) planta.id = id;
 		planta.nome = campoNome.getText().toString().trim();
 		planta.cientifico = campoCientifico.getText().toString().trim();
 		planta.familia = campoFamilia.getText().toString().trim();
@@ -248,31 +236,27 @@ public class EditarPlanta extends ConexaoUtils {
 		planta.observacao = campoObservacao.getText().toString().trim();
 		
 		if (planta.nome.equals("")) {
-			AlertDialog.Builder alerta = new AlertDialog.Builder(EditarPlanta.this);
-			alerta.setTitle(R.string.msg_erro); //Msg: Erro!
-			//Msg: Por favor! informe o nome da planta antes de gravar.
-			alerta.setMessage(R.string.msg06_form_editar);
-			alerta.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+			AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
+			mensagem.setTitle(R.string.msg_erro); //Msg: Erro!
+			mensagem.setMessage(R.string.msg06_form_editar);//Msg: Por favor! informe o nome da planta antes de gravar.
+			mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 
-						public void onClick(DialogInterface dialog,
-								int whichButton) {
-						}
-					});
-			alerta.show();
+				public void onClick(DialogInterface dialog,
+						int whichButton) {
+				}
+			});
+			mensagem.show();
 			return;
 		} else if (planta.cientifico.equals("") 
-				|| (planta.familia.equals(""))
-				|| (planta.utiliza.equals(""))
-				|| (planta.local_coleta.equals(""))
-				|| (planta.coletor.equals(""))
-				|| (planta.data_coleta.equals(""))
-				|| (planta.determinador.equals(""))
-				|| (planta.formacaoVegetal.equals(""))) {
-
-			//Msg: Planta gravada com sucesso!
-			Toast.makeText(EditarPlanta.this, R.string.msg07_form_editar,Toast.LENGTH_SHORT).show();
-			//Msg: Algumas informações importantes referente a planta não foram informadas!
-			Toast.makeText(EditarPlanta.this,R.string.msg08_form_editar,Toast.LENGTH_LONG).show();
+						|| (planta.familia.equals(""))
+						|| (planta.utiliza.equals(""))
+						|| (planta.local_coleta.equals(""))
+						|| (planta.coletor.equals(""))
+						|| (planta.data_coleta.equals(""))
+						|| (planta.determinador.equals(""))
+						|| (planta.formacaoVegetal.equals(""))) {
+			Toast.makeText(EditarPlanta.this, R.string.msg07_form_editar,Toast.LENGTH_SHORT).show();//Msg: Planta gravada com sucesso!
+			Toast.makeText(EditarPlanta.this,R.string.msg08_form_editar,Toast.LENGTH_LONG).show();//Msg: Algumas informações importantes referente a planta não foram informadas!
 		}
 		salvarPlanta(planta);
 		setResult(RESULT_OK, new Intent());
@@ -325,10 +309,9 @@ public class EditarPlanta extends ConexaoUtils {
 					|| (planta.data_coleta.equals(""))
 					|| (planta.determinador.equals(""))
 					|| (planta.formacaoVegetal.equals(""))) {
-				//Msg: Algumas informações estão faltando na geração do arquivo!
-				Toast.makeText(EditarPlanta.this,R.string.msg10_form_editar, Toast.LENGTH_LONG).show();
-			}//Msg: Arquivo gerado com sucesso!
-			Toast.makeText(EditarPlanta.this,R.string.msg09_form_editar, Toast.LENGTH_SHORT).show();
+				Toast.makeText(EditarPlanta.this,R.string.msg10_form_editar, Toast.LENGTH_LONG).show();//Msg: Algumas informações estão faltando na geração do arquivo!
+			}
+			Toast.makeText(EditarPlanta.this,R.string.msg09_form_editar, Toast.LENGTH_SHORT).show();//Msg: Arquivo gerado com sucesso!
 
 			Log.i(CATEGORIA, texto + " - Escrito com sucesso");
 		} catch (FileNotFoundException e) {
@@ -336,13 +319,6 @@ public class EditarPlanta extends ConexaoUtils {
 		} catch (IOException e) {
 			Log.e(CATEGORIA, e.getMessage(), e);
 		}
-	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-		setResult(RESULT_CANCELED);
-		// finish();
 	}
 	
 	public void mostraImagemGoogle() {
@@ -353,21 +329,17 @@ public class EditarPlanta extends ConexaoUtils {
 		String GoogleImagem = "https://www.google.com.br/search?site=imghp&tbm=isch&source=hp&biw=1366&bih=657&q=planta+";
 
 		if (NomePlanta.equals("")) {
-			AlertDialog.Builder alerta = new AlertDialog.Builder(
-					EditarPlanta.this);
-			alerta.setTitle(R.string.msg_erro); //Msg: Erro!
-			//Msg: Por favor! informe o nome de uma planta para visualizar a imagem.
-			alerta.setMessage(R.string.msg11_form_editar);
-			alerta.setPositiveButton("OK",
-					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog,
-								int whichButton) {
-						}
-					});
-			alerta.show();
+			AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
+			mensagem.setTitle(R.string.msg_erro); //Msg: Erro!
+			mensagem.setMessage(R.string.msg11_form_editar);//Msg: Por favor! informe o nome de uma planta para visualizar a imagem.
+			mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog,
+						int whichButton) {
+				}
+			});
+			mensagem.show();
 			return;
 		}
-		// Concatena a URL com o nome da planta que está na tela
 		StringBuilder strBuilder = new StringBuilder();
 		strBuilder.append(GoogleImagem).append(NomePlanta);
 		String URLCompleta = strBuilder.toString();
@@ -379,9 +351,7 @@ public class EditarPlanta extends ConexaoUtils {
 	}
 
 	public void excluir() {
-		if (id != null) {
-			excluirPlanta(id);
-		}
+		if (id != null) excluirPlanta(id);
 		setResult(RESULT_OK, new Intent());
 		finish();
 	}
@@ -396,5 +366,12 @@ public class EditarPlanta extends ConexaoUtils {
 
 	protected void excluirPlanta(long id) {
 		EditarPlanta.repositorio.deletar(id);
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		setResult(RESULT_CANCELED);
+		// finish();
 	}
 }

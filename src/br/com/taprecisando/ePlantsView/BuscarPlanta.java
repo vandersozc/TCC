@@ -36,11 +36,9 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 	protected void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		
-		//Instância do banco de dados
 		repositorio = new RepositorioPlantaScript(this);
 		setContentView(R.layout.form_buscar_planta);
 		
-		//Desabilita subida automática do teclado
 		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 		
 		campoNome =            (EditText) findViewById(R.id.imput_text_nome_form_buscar);
@@ -67,27 +65,20 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 			}
 		});	
 	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-		setResult(RESULT_CANCELED);
-		//finish();
-	}
-
+	
 	public void onClick(View view) {
 		String nomePlanta = campoNome.getText().toString();
 		Planta planta = getPlantaPeloNome(nomePlanta);
 		
 		if (nomePlanta.equals("")){
-			AlertDialog.Builder alerta = new AlertDialog.Builder(BuscarPlanta.this);
-			alerta.setTitle(R.string.msg_erro); //Msg: Erro!
-			alerta.setMessage(R.string.msg01_form_buscar); //Msg: Por favor! informe o nome de uma planta para a busca.
-			alerta.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			AlertDialog.Builder mensagem = new AlertDialog.Builder(BuscarPlanta.this);
+			mensagem.setTitle(R.string.msg_erro); //Msg: Erro!
+			mensagem.setMessage(R.string.msg01_form_buscar); //Msg: Por favor! informe o nome de uma planta para a busca.
+			mensagem.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog,int whichButton) {
 				}
 			});
-			alerta.show();
+			mensagem.show();
 			return;
 		}
 		
@@ -121,5 +112,12 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 	protected Planta getPlantaPeloNome(String nomePlanta) {
 		Planta planta = BuscarPlanta.repositorio.buscarPlantaPeloNome(nomePlanta);
 		return planta;
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		setResult(RESULT_CANCELED);
+		//finish();
 	}
 }

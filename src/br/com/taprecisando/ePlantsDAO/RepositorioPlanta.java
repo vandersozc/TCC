@@ -142,15 +142,12 @@ public class RepositorioPlanta {
 		}
 	}
 
-	// Retorna uma lista com todas as plantas
 	public List<Planta> listarPlantas() {
 		Cursor lista = getCursor();
 
 		List<Planta> plantas = new ArrayList<Planta>();
 
 		if (lista.moveToFirst()) {
-
-			// Recupera os índices das colunas
 			int idxId = 			 lista.getColumnIndex(Plantas._ID);
 			int idxNome = 			 lista.getColumnIndex(Plantas.NOME);
 			int idxCientifico = 	 lista.getColumnIndex(Plantas.CIENTIFICO);
@@ -187,7 +184,6 @@ public class RepositorioPlanta {
 
 	// Busca a planta pelo nome "select * from planta where nome=?"
 	public Planta buscarPlantaPeloNome(String nomePlanta) {
-		
 		Planta planta = null;
 
 		try {

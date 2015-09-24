@@ -26,10 +26,8 @@ public class ListarPlanta extends ListActivity {
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-
 		repositorio = new RepositorioPlantaScript(this);
 		atualizarLista();
-
 	}
 
 	protected void atualizarLista() {
@@ -37,15 +35,12 @@ public class ListarPlanta extends ListActivity {
 		setListAdapter(new PlantaListAdapter(this, plantas));
 	}
 
-	/*--------------------------- Criação do Menu da lista----------------------------*/
-
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.listar_planta, menu);
 		return true;
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
-
 		switch (item.getItemId()) {
 		case R.id.ic_action_menu_novo:
 			startActivityForResult(new Intent(this, EditarPlanta.class),INSERIR_EDITAR);
@@ -62,8 +57,6 @@ public class ListarPlanta extends ListActivity {
 		}
 	}
 
-	// ----------------------------------------------------------------------------------------------------------
-
 	@Override
 	protected void onListItemClick(ListView l, View v, int posicao, long id) {
 		super.onListItemClick(l, v, posicao, id);
@@ -71,10 +64,8 @@ public class ListarPlanta extends ListActivity {
 	}
 
 	protected void editarPlanta(int posicao) {
-
 		Planta planta = plantas.get(posicao);
 		Intent it = new Intent(this, EditarPlanta.class);
-		// Passa o codigo da planta como parâmetro
 		it.putExtra(Plantas._ID, planta.id);
 		startActivityForResult(it, INSERIR_EDITAR);
 
@@ -84,7 +75,6 @@ public class ListarPlanta extends ListActivity {
 	@Override
 	protected void onActivityResult(int codigo, int codigoRetorno, Intent it) {
 		super.onActivityResult(codigo, codigoRetorno, it);
-
 		if (codigoRetorno == RESULT_OK) {
 			atualizarLista();
 		}

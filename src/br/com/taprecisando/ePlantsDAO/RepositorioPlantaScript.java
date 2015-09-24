@@ -108,7 +108,6 @@ public class RepositorioPlantaScript extends RepositorioPlanta {
 	private SQLiteHelper dbHelper;
 
 	public RepositorioPlantaScript(Context ctx) {
-		// Criar utilizando um script SQL
 		dbHelper = new SQLiteHelper(ctx, RepositorioPlantaScript.NOME_BANCO,
 				RepositorioPlantaScript.VERSAO_BANCO,
 				RepositorioPlantaScript.SCRIPT_DATABASE_CREATE,

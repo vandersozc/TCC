@@ -40,7 +40,6 @@ class SQLiteHelper extends SQLiteOpenHelper {
 		for (int i = 0; i < qtdeScripts; i++) {
 			String sql = scriptSQLCreate[i];
 			Log.i(CATEGORIA, sql);
-			// Cria o banco de dados executando o script de criação
 			db.execSQL(sql);
 		}
 	}
