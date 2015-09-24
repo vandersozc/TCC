@@ -31,7 +31,6 @@ public class MontaArquivoExportacao {
 			                 String determinador,
 			                 String formacao_vegetal,
 			                 String observacao) {
-
 		Date data = new Date(System.currentTimeMillis());
 		SimpleDateFormat formatarDate = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 
