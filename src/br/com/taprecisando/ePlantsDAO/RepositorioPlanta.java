@@ -100,7 +100,6 @@ public class RepositorioPlanta {
 		return count;
 	}
 
-	// Deleta a planta com os argumentos fornecidos
 	public int deletar(String where, String[] whereArgs) {
 		int count = db.delete(NOME_TABELA, where, whereArgs);
 		Log.i(CATEGORIA, "Deletou [" + count + "] registros");
@@ -131,10 +130,8 @@ public class RepositorioPlanta {
 		return null;
 	}
 
-	// Retorna um cursor com todas as plantas
 	public Cursor getCursor() {
 		try {
-			// select * from plantas
 			return db.query(NOME_TABELA, Planta.colunas, null,null,null,null,null,null);
 		} catch (SQLException e) {
 			Log.e(CATEGORIA, "Erro ao buscar as plantas: " + e.toString());
@@ -182,18 +179,14 @@ public class RepositorioPlanta {
 		return plantas;
 	}
 
-	// Busca a planta pelo nome "select * from planta where nome=?"
 	public Planta buscarPlantaPeloNome(String nomePlanta) {
 		Planta planta = null;
 
 		try {
-			// Idem a: SELECT _id,nome,cientifico,familia, utiliza from planta where nome = ?
 			Cursor busca = db.query(NOME_TABELA, Planta.colunas, Plantas.NOME + "='" + nomePlanta + "'", null, null, null, null, null);
 			if (busca.moveToNext()) {
 
 				planta = new Planta();
-
-				// utiliza os métodos getLong(), getString(), getInt(), etc para recuperar os valores
 				planta.id = 			 busca.getLong(0);
 				planta.nome = 			 busca.getString(1).trim();
 				planta.cientifico = 	 busca.getString(2).trim();
@@ -214,9 +207,6 @@ public class RepositorioPlanta {
 		return planta;
 	}
 
-	// Busca uma planta utilizando as configurações definidas no
-	// SQLiteQueryBuilder
-	// Utilizado pelo Content Provider de planta
 	public Cursor query(SQLiteQueryBuilder queryBuilder, 
 			            String[] projection, 
 			            String selection, 

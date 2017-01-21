@@ -99,7 +99,6 @@ public class Planta {
 	 */
 	public static final class Plantas implements BaseColumns {
 
-		// Não pode instanciar esta Classe
 		private Plantas() {
 		}
 
@@ -123,7 +122,6 @@ public class Planta {
 		public static final String OBSERVACAO = 	 "observacao";
 
 		public static Uri getUriId(long id) {
-			// Adiciona o id na URI default do /plantas
 			Uri uriPlantas = ContentUris.withAppendedId(Plantas.CONTENT_URI, id);
 			return uriPlantas;
 		}
@@ -141,6 +139,5 @@ public class Planta {
 			   ", Determinador: "	 + determinador +
 			   ", FormacaoVegetal: " + formacaoVegetal +
 			   ", Observacao: " 	 + observacao;
-		
 	}
 }

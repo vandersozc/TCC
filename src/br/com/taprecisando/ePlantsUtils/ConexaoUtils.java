@@ -12,13 +12,8 @@ public class ConexaoUtils extends Activity {
 
 	protected boolean isConexaoValida() {
 		ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-		if (conectivtyManager.getActiveNetworkInfo() != null
-				&& conectivtyManager.getActiveNetworkInfo().isAvailable()
-				&& conectivtyManager.getActiveNetworkInfo().isConnected()) {
-			return true;
-		} else {
-			return false;
-		}
+		
+		return conectivtyManager.getActiveNetworkInfo() != null && conectivtyManager.getActiveNetworkInfo().isAvailable()
+				&& conectivtyManager.getActiveNetworkInfo().isConnected();
 	}
-
 }

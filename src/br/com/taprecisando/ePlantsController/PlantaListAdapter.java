@@ -46,12 +46,6 @@ public class PlantaListAdapter extends BaseAdapter {
 		TextView cientifico = (TextView) view.findViewById(R.id.imput_text_nome_cientifico_form_lista);
 		cientifico.setText(p.cientifico);
 		
-		// TextView familia = (TextView) view.findViewById(R.id.familia);
-		// familia.setText(p.familia);
-		
-		// TextView utiliza = (TextView) view.findViewById(R.id.utiliza);
-		// utiliza.setText(p.utiliza);
-		
 		return view;
 	}
 }
