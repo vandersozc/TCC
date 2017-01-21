@@ -22,10 +22,10 @@ public class RepositorioPlanta {
 	private static final String NOME_BANCO = "ePlantsDB";
 	public static final String NOME_TABELA = "planta";
 
-	protected SQLiteDatabase db;
+	protected SQLiteDatabase database;
 
-	public RepositorioPlanta(Context ctx) {
-		db = ctx.openOrCreateDatabase(NOME_BANCO, Context.MODE_PRIVATE, null);
+	public RepositorioPlanta(Context context) {
+		database = context.openOrCreateDatabase(NOME_BANCO, Context.MODE_PRIVATE, null);
 	}	
 
 	public RepositorioPlanta() {
@@ -59,7 +59,7 @@ public class RepositorioPlanta {
 	}
 
 	public long inserir(ContentValues valores) {
-		long id = db.insert(NOME_TABELA, "", valores);
+		long id = database.insert(NOME_TABELA, "", valores);
 		return id;
 	}
 
@@ -85,7 +85,7 @@ public class RepositorioPlanta {
 	}
 
 	public int atualizar(ContentValues valores, String where, String[] whereArgs) {
-		int count = db.update(NOME_TABELA, valores, where, whereArgs);
+		int count = database.update(NOME_TABELA, valores, where, whereArgs);
 		
 		Log.i(CATEGORIA, "Atualizou [" + count + "] registros");
 		return count;
@@ -101,13 +101,13 @@ public class RepositorioPlanta {
 	}
 
 	public int deletar(String where, String[] whereArgs) {
-		int count = db.delete(NOME_TABELA, where, whereArgs);
+		int count = database.delete(NOME_TABELA, where, whereArgs);
 		Log.i(CATEGORIA, "Deletou [" + count + "] registros");
 		return count;
 	}
 
 	public Planta buscarPlanta(long id) {
-		Cursor c = db.query(true, NOME_TABELA, Planta.colunas, Plantas._ID
+		Cursor c = database.query(true, NOME_TABELA, Planta.colunas, Plantas._ID
 				+ "=" + id, null, null, null, null, null);
 
 		if (c.getCount() > 0) {
@@ -132,7 +132,7 @@ public class RepositorioPlanta {
 
 	public Cursor getCursor() {
 		try {
-			return db.query(NOME_TABELA, Planta.colunas, null,null,null,null,null,null);
+			return database.query(NOME_TABELA, Planta.colunas, null,null,null,null,null,null);
 		} catch (SQLException e) {
 			Log.e(CATEGORIA, "Erro ao buscar as plantas: " + e.toString());
 			return null;
@@ -175,7 +175,6 @@ public class RepositorioPlanta {
 
 			} while (lista.moveToNext());
 		}
-
 		return plantas;
 	}
 
@@ -183,7 +182,7 @@ public class RepositorioPlanta {
 		Planta planta = null;
 
 		try {
-			Cursor busca = db.query(NOME_TABELA, Planta.colunas, Plantas.NOME + "='" + nomePlanta + "'", null, null, null, null, null);
+			Cursor busca = database.query(NOME_TABELA, Planta.colunas, Plantas.NOME + " LIKE '%" + nomePlanta + "%'", null, null, null, null, null);
 			if (busca.moveToNext()) {
 
 				planta = new Planta();
@@ -207,28 +206,14 @@ public class RepositorioPlanta {
 		return planta;
 	}
 
-	public Cursor query(SQLiteQueryBuilder queryBuilder, 
-			            String[] projection, 
-			            String selection, 
-			            String[] selectionArgs,
-			            String groupBy, 
-			            String having, 
-			            String orderBy) {
+	public Cursor query(SQLiteQueryBuilder queryBuilder, String[] projection, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {		
 		
-		Cursor c = queryBuilder.query(this.db, projection, 
-				                               selection,
-				                               selectionArgs,
-				                               groupBy,
-				                               having,
-				                               orderBy);
-		return c;
+		return queryBuilder.query(this.database, projection, selection, selectionArgs, groupBy, having,orderBy);
 	}
 
-
-	//public void fechar() {
-	//	if (db != null) {
-//			db.close();
+//	public void fechar() {
+//		if (database != null) {
+//			database.close();
 //		}
 //	}
-
 }

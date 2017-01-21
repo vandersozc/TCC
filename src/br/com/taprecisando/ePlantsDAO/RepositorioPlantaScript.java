@@ -112,14 +112,14 @@ public class RepositorioPlantaScript extends RepositorioPlanta {
 				RepositorioPlantaScript.VERSAO_BANCO,
 				RepositorioPlantaScript.SCRIPT_DATABASE_CREATE,
 				RepositorioPlantaScript.SCRIPT_DATABASE_DELETE);
-		db = dbHelper.getWritableDatabase();
+		database = dbHelper.getWritableDatabase();
 	}
-	// Fecha o banco
-	// @Override
-	 //public void fechar() {
-	 //super.fechar();
-	 //if (dbHelper != '') {
-	 //dbHelper.close();
-	// }
-	 //}
+	 
+//	 @Override
+//	 public void fechar() {
+//		 super.fechar();
+//		 if (dbHelper != null) {
+//			 dbHelper.close();
+//		 }
+//	 }
 }
