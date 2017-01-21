@@ -35,12 +35,11 @@ public class PlantaListAdapter extends BaseAdapter {
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// Peaga a posição atual
+
 		Planta p = lista.get(position);
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View view = inflater.inflate(R.layout.form_listar_planta, null);
 		
-		// Atualiza o valor do TextView
 		TextView nome = (TextView) view.findViewById(R.id.imput_text_nome_form_lista);
 		nome.setText(p.nome);
 		
