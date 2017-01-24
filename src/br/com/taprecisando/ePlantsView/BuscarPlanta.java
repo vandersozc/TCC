@@ -72,8 +72,8 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 		
 		if (nomePlanta.equals("")){
 			AlertDialog.Builder mensagem = new AlertDialog.Builder(BuscarPlanta.this);
-			mensagem.setTitle(R.string.msg_erro); //Msg: Erro!
-			mensagem.setMessage(R.string.msg01_form_buscar); //Msg: Por favor! informe o nome de uma planta para a busca.
+			mensagem.setTitle(R.string.text_value_erro); //Msg: Erro!
+			mensagem.setMessage(R.string.text_value_msg_01); //Msg: Por favor! informe o nome de uma planta para a busca.
 			
 			mensagem.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog,int whichButton) {
@@ -106,7 +106,7 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 			campoObservacao.setText("");
 			
 			//Msg: Oops!\nNenhum exemplar encontrado!
-			Toast.makeText(BuscarPlanta.this, R.string.msg03_form_buscar, Toast.LENGTH_SHORT).show();
+			Toast.makeText(BuscarPlanta.this, R.string.text_value_msg_02, Toast.LENGTH_SHORT).show();
 		}
 	}
 

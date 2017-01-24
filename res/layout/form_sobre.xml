@@ -27,9 +27,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:background="@color/verde"
-                android:contentDescription="@string/text_cabecalho_form_sobre"
+                android:contentDescription="@string/text_value_sobre_app"
                 android:gravity="center"
-                android:text="@string/text_cabecalho_form_sobre"
+                android:text="@string/text_value_sobre_app"
                 android:textColor="@color/branco"
                 android:textSize="@dimen/text_cabecalho" />
 
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:contentDescription="@string/ic_splash_form_splash"
+                android:contentDescription="@string/text_value_imagem_splash"
                 android:src="@drawable/ic_icon" />
 
             <TextView
@@ -49,8 +49,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imageView1"
                 android:layout_marginTop="19dp"
-                android:contentDescription="@string/text_nome_form_sobre"
-                android:text="@string/text_nome_form_sobre" />
+                android:contentDescription="@string/text_value_nome_app"
+                android:text="@string/text_value_nome_app" />
 
             <TextView
                 android:id="@+id/text_versao_form_sobre"
@@ -58,8 +58,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_nome_form_sobre"
-                android:contentDescription="@string/text_versao_form_sobre"
-                android:text="@string/text_versao_form_sobre" />
+                android:contentDescription="@string/text_value_versao"
+                android:text="@string/text_value_versao" />
 
             <TextView
                 android:id="@+id/text_data_form_sobre"
@@ -67,8 +67,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_versao_form_sobre"
-                android:contentDescription="@string/text_data_form_sobre"
-                android:text="@string/text_data_form_sobre" />
+                android:contentDescription="@string/text_value_data_criacao"
+                android:text="@string/text_value_data_criacao" />
 
             <TextView
                 android:id="@+id/text_dev_form_sobre"
@@ -77,8 +77,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_data_form_sobre"
                 android:layout_marginTop="14dp"
-                android:contentDescription="@string/text_dev_form_sobre"
-                android:text="@string/text_dev_form_sobre"
+                android:contentDescription="@string/text_value_design_dev"
+                android:text="@string/text_value_design_dev"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
@@ -87,8 +87,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_dev_form_sobre"
-                android:contentDescription="@string/text_nome_dev_form_sobre"
-                android:text="@string/text_nome_dev_form_sobre" />
+                android:contentDescription="@string/text_value_desenvolvedor"
+                android:text="@string/text_value_desenvolvedor" />
 
             <TextView
                 android:id="@+id/text_email_dev_form_sobre"
@@ -96,8 +96,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_nome_dev_form_sobre"
-                android:contentDescription="@string/text_email_dev_form_sobre"
-                android:text="@string/text_email_dev_form_sobre"
+                android:contentDescription="@string/text_value_email_dev"
+                android:text="@string/text_value_email_dev"
                 android:textColor="@color/link_web" />
 
             <TextView
@@ -107,8 +107,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_email_dev_form_sobre"
                 android:layout_marginTop="16dp"
-                android:contentDescription="@string/text_sobre_form_sobre"
-                android:text="@string/text_sobre_form_sobre"
+                android:contentDescription="@string/text_value_sobre"
+                android:text="@string/text_value_sobre"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
@@ -117,8 +117,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_sobre_form_sobre"
-                android:contentDescription="@string/text01_form_sobre"
-                android:text="@string/text01_form_sobre" />
+                android:contentDescription="@string/text_value_paragrafo_01"
+                android:text="@string/text_value_paragrafo_01" />
 
             <TextView
                 android:id="@+id/text02_form_sobre"
@@ -126,8 +126,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text01_form_sobre"
-                android:contentDescription="@string/text02_form_sobre"
-                android:text="@string/text02_form_sobre" />
+                android:contentDescription="@string/text_value_paragrafo_02"
+                android:text="@string/text_value_paragrafo_02" />
 
             <TextView
                 android:id="@+id/text_agradece_form_sobre"
@@ -136,8 +136,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/text02_form_sobre"
-                android:contentDescription="@string/text_agradece_form_sobre"
-                android:text="@string/text_agradece_form_sobre"
+                android:contentDescription="@string/text_value_agradecimento"
+                android:text="@string/text_value_agradecimento"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
@@ -147,8 +147,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/text_agradece_form_sobre"
-                android:contentDescription="@string/text_agradece01_form_sobre"
-                android:text="@string/text_agradece01_form_sobre" />
+                android:contentDescription="@string/text_value_agradecimento_01"
+                android:text="@string/text_value_agradecimento_01" />
 
             <TextView
                 android:id="@+id/text_agradece02_form_sobre"
@@ -157,8 +157,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/text_agradece01_form_sobre"
-                android:contentDescription="@string/text_agradece02_form_sobre"
-                android:text="@string/text_agradece02_form_sobre" />
+                android:contentDescription="@string/text_value_agradecimento_02"
+                android:text="@string/text_value_agradecimento_02" />
 
             <TextView
                 android:id="@+id/text_sugestao_form_sobre"
@@ -167,8 +167,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/text_agradece02_form_sobre"
-                android:contentDescription="@string/text_sugestao_form_sobre"
-                android:text="@string/text_sugestao_form_sobre"
+                android:contentDescription="@string/text_value_sugestao"
+                android:text="@string/text_value_sugestao"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
@@ -176,8 +176,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_sugestao_form_sobre"
-                android:contentDescription="@string/text_sugestao01_form_sobre"
-                android:text="@string/text_sugestao01_form_sobre" />
+                android:contentDescription="@string/text_value_sugestao_01"
+                android:text="@string/text_value_sugestao_01" />
 
             <TextView
                 android:id="@+id/text_email01_dev_form_sobre"
@@ -186,8 +186,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/text_sugestao01_form_sobre"
-                android:contentDescription="@string/text_email_dev_form_sobre"
-                android:text="@string/text_email_dev_form_sobre"
+                android:contentDescription="@string/text_value_email_dev"
+                android:text="@string/text_value_email_dev"
                 android:textColor="@color/link_web" />
 
         </RelativeLayout>

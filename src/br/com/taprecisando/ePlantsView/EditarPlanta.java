@@ -112,8 +112,8 @@ public class EditarPlanta extends ConexaoUtils {
 					mostraImagemGoogle();
 				} else {
 					AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
-					mensagem.setTitle(R.string.msg_erro); //Msg: Erro!
-					mensagem.setMessage(R.string.msg01_form_editar);//Msg: Você não está conectado a internet!Por favor tente mais tarde.
+					mensagem.setTitle(R.string.text_value_erro); //Msg: Erro!
+					mensagem.setMessage(R.string.text_value_msg_03);//Msg: Você não está conectado a internet!Por favor tente mais tarde.
 					mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog,
 								int whichButton) {
@@ -148,7 +148,7 @@ public class EditarPlanta extends ConexaoUtils {
 			botaoExcluir.setOnClickListener(new OnClickListener() {
 				public void onClick(View view) {
 					excluir();
-					Toast.makeText(EditarPlanta.this, R.string.msg03_form_editar, Toast.LENGTH_SHORT).show();//Msg: Exemplar excluído com sucesso!
+					Toast.makeText(EditarPlanta.this, R.string.text_value_msg_04, Toast.LENGTH_SHORT).show();//Msg: Exemplar excluído com sucesso!
 				}
 			});
 		}
@@ -178,8 +178,8 @@ public class EditarPlanta extends ConexaoUtils {
 	
 				if (planta.nome.equals("")) {
 					AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
-					mensagem.setTitle(R.string.msg_erro); //Erro!
-					mensagem.setMessage(R.string.msg04_form_editar);//Msg: Obrigatório informar o nome comum da planta para a exportação!
+					mensagem.setTitle(R.string.text_value_erro); //Erro!
+					mensagem.setMessage(R.string.text_value_msg_05);//Msg: Obrigatório informar o nome comum da planta para a exportação!
 					mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
 										int whichButton) {
@@ -195,7 +195,7 @@ public class EditarPlanta extends ConexaoUtils {
 					ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.xml.alerta, itens);
 	
 					final AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
-					mensagem.setTitle(R.string.msg05_form_editar); //Msg: Escolha o formado de exportação
+					mensagem.setTitle(R.string.text_value_msg_06); //Msg: Escolha o formado de exportação
 					mensagem.setSingleChoiceItems(adapter, 0,new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface arg0, int arg1) {
 									switch (arg1) {
@@ -237,8 +237,8 @@ public class EditarPlanta extends ConexaoUtils {
 		
 		if (planta.nome.equals("")) {
 			AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
-			mensagem.setTitle(R.string.msg_erro); //Msg: Erro!
-			mensagem.setMessage(R.string.msg06_form_editar);//Msg: Por favor! informe o nome da planta antes de gravar.
+			mensagem.setTitle(R.string.text_value_erro); //Msg: Erro!
+			mensagem.setMessage(R.string.text_value_msg_07);//Msg: Por favor! informe o nome da planta antes de gravar.
 			mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 
 				public void onClick(DialogInterface dialog,
@@ -255,8 +255,8 @@ public class EditarPlanta extends ConexaoUtils {
 						|| (planta.data_coleta.equals(""))
 						|| (planta.determinador.equals(""))
 						|| (planta.formacaoVegetal.equals(""))) {
-			Toast.makeText(EditarPlanta.this, R.string.msg07_form_editar,Toast.LENGTH_SHORT).show();//Msg: Planta gravada com sucesso!
-			Toast.makeText(EditarPlanta.this,R.string.msg08_form_editar,Toast.LENGTH_LONG).show();//Msg: Algumas informações importantes referente a planta não foram informadas!
+			Toast.makeText(EditarPlanta.this, R.string.text_value_msg_08,Toast.LENGTH_SHORT).show();//Msg: Planta gravada com sucesso!
+			Toast.makeText(EditarPlanta.this,R.string.text_value_msg_09,Toast.LENGTH_LONG).show();//Msg: Algumas informações importantes referente a planta não foram informadas!
 		}
 		salvarPlanta(planta);
 		setResult(RESULT_OK, new Intent());
@@ -309,9 +309,9 @@ public class EditarPlanta extends ConexaoUtils {
 					|| (planta.data_coleta.equals(""))
 					|| (planta.determinador.equals(""))
 					|| (planta.formacaoVegetal.equals(""))) {
-				Toast.makeText(EditarPlanta.this,R.string.msg10_form_editar, Toast.LENGTH_LONG).show();//Msg: Algumas informações estão faltando na geração do arquivo!
+				Toast.makeText(EditarPlanta.this,R.string.text_value_msg_10, Toast.LENGTH_LONG).show();//Msg: Algumas informações estão faltando na geração do arquivo!
 			}
-			Toast.makeText(EditarPlanta.this,R.string.msg09_form_editar, Toast.LENGTH_SHORT).show();//Msg: Arquivo gerado com sucesso!
+			Toast.makeText(EditarPlanta.this,R.string.text_value_msg_10, Toast.LENGTH_SHORT).show();//Msg: Arquivo gerado com sucesso!
 
 			Log.i(CATEGORIA, texto + " - Escrito com sucesso");
 		} catch (FileNotFoundException e) {
@@ -330,8 +330,8 @@ public class EditarPlanta extends ConexaoUtils {
 
 		if (NomePlanta.equals("")) {
 			AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
-			mensagem.setTitle(R.string.msg_erro); //Msg: Erro!
-			mensagem.setMessage(R.string.msg11_form_editar);//Msg: Por favor! informe o nome de uma planta para visualizar a imagem.
+			mensagem.setTitle(R.string.text_value_erro); //Msg: Erro!
+			mensagem.setMessage(R.string.text_value_msg_12);//Msg: Por favor! informe o nome de uma planta para visualizar a imagem.
 			mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog,
 						int whichButton) {

@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_action_export"
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
-        android:title="@string/ic_action_menu_export">
+        android:title="@string/text_value_exportar_conteudo">
     </item>
 
 </menu>

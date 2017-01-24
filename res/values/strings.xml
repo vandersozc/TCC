@@ -1,102 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <string name="app_name">&quot;ePlants&quot;</string>
-    <string name="ic_action_buscar">&quot;Search&quot;</string>
-    <string name="ic_action_buscar_form_buscar">&quot;Search&quot;</string>
-    <string name="ic_action_buscar_form_main">&quot;Search&quot;</string>
-    <string name="ic_action_cancelar_form_buscar">&quot;Cancel&quot;</string>
-    <string name="ic_action_cancelar_form_editar">&quot;Cancel&quot;</string>
-    <string name="ic_action_excluir_form_editar">&quot;Delete&quot;</string>
-    <string name="ic_action_sobre_form_main">&quot;About&quot;</string>
-    <string name="ic_action_foto_form_editar">&quot;Image&quot;</string>
-    <string name="ic_action_listar_form_main">&quot;List&quot;</string>
-    <string name="ic_action_mais_form_lista">&quot;More&quot;</string>
-    <string name="ic_action_salvar_form_editar">&quot;Edit&quot;</string>
-    <string name="ic_action_salvar_form_main">&quot;Save&quot;</string>
-    <string name="ic_splash_form_splash">&quot;Splash image&quot;</string>
-    <string name="imput_text_coletor_form_buscar">&quot;Collector(s)&quot;</string>
-    <string name="imput_text_coletor_form_editar">&quot;Collector&quot;</string>
-    <string name="imput_text_data_coleta_form_buscar">&quot;Date of collection&quot;</string>
-    <string name="imput_text_data_coleta_form_editar">&quot;Date of collection&quot;</string>
-    <string name="imput_text_determinador_form_buscar">&quot;Determiner&quot;</string>
-    <string name="imput_text_determinador_form_editar">&quot;Determiner&quot;</string>
-    <string name="imput_text_familia_form_buscar">&quot;Family&quot;</string>
-    <string name="imput_text_familia_form_editar">&quot;Family&quot;</string>
-    <string name="imput_text_formacao_vegetal_form_buscar">&quot;Plant formation&quot;</string>
-    <string name="imput_text_formacao_vegetal_form_editar">&quot;Plant formation&quot;</string>
-    <string name="imput_text_local_coleta_form_editar">&quot;Collection site&quot;</string>
-    <string name="imput_text_nome_cientifico_form_buscar">&quot;Scientific name&quot;</string>
-    <string name="imput_text_nome_cientifico_form_editar">&quot;Scientific name&quot;</string>
-    <string name="imput_text_nome_cientifico_form_lista">&quot;Scientific name&quot;</string>
-    <string name="imput_text_nome_form_buscar">&quot;Name&quot;</string>
-    <string name="imput_text_nome_form_editar">&quot;Name&quot;</string>
-    <string name="imput_text_nome_form_lista">&quot;Name&quot;</string>
-    <string name="imput_text_observacao_form_buscar">&quot;Observation&quot;</string>
-    <string name="imput_text_observacao_form_editar">&quot;Observation&quot;</string>
-    <string name="imput_text_utilizacao_form_buscar">&quot;Use&quot;</string>
-    <string name="imput_text_utilizacao_form_editar">&quot;Use&quot;</string>
-    <string name="progressBar_form_splash">&quot;ProgressBar&quot;</string>
-    <string name="text_cabecalho_form_buscar">&quot;Search Plant&quot;</string>
-    <string name="text_cabecalho_form_editar">&quot;Plant Information&quot;</string>
-    <string name="text_coletor_form_buscar">&quot;Collector(s):&quot;</string>
-    <string name="text_coletor_form_editar">&quot;Collector(s):&quot;</string>
-    <string name="text_data_coleta_form_buscar">&quot;Date of collection:&quot;</string>
-    <string name="text_data_coleta_form_editar">&quot;Date of collection:&quot;</string>
-    <string name="text_determinador_form_buscar">&quot;Determiner:&quot;</string>
-    <string name="text_determinador_form_editar">&quot;Determiner:&quot;</string>
-    <string name="text_familia_form_buscar">&quot;Family:&quot;</string>
-    <string name="text_familia_form_editar">&quot;Family:&quot;</string>
-    <string name="text_formacao_vegetal_form_buscar">&quot;Plant formation:&quot;</string>
-    <string name="text_formacao_vegetal_form_editar">&quot;Plant formation:&quot;</string>
-    <string name="text_local_coleta_form_editar">&quot;Collection site:&quot;</string>
-    <string name="text_nome_cientifico_form_buscar">&quot;Scientific name:&quot;</string>
-    <string name="text_nome_cientifico_form_editar">&quot;Scientific name:&quot;</string>
-    <string name="text_nome_cientifico_form_lista">&quot;Scientific name:&quot;</string>
-    <string name="text_nome_form_buscar">&quot;Name:&quot;</string>
-    <string name="text_nome_form_editar">&quot;Name:&quot;</string>
-    <string name="text_nome_form_lista">&quot;Name:&quot;</string>
-    <string name="text_observacao_form_buscar">&quot;Observation:&quot;</string>
-    <string name="text_observacao_form_editar">&quot;Observation:&quot;</string>
-    <string name="text_utilizacao_form_buscar">&quot;Use:&quot;</string>
-    <string name="text_utilizacao_form_editar">&quot;Use:&quot;</string>
-    <string name="text_local_coleta_form_buscar">&quot;Collection site:&quot;</string>
-    <string name="imput_text_local_coleta_form_buscar">&quot;Collection site&quot;</string>
-    <string name="ic_action_menu_export">&quot;Export content&quot;</string>
-    <string name="ic_action_menu_foto">&quot;Google image&quot;</string>
-    <string name="ic_action_menu_novo">&quot;Insert new&quot;</string>
-    <string name="ic_action_menu_buscar">&quot;Search&quot;</string>
-    <string name="msg_erro">&quot;Error!&quot;</string>
-    <string name="msg01_form_buscar">&quot;Please! enter the name of a plant for the search.&quot;</string>
-    <string name="msg03_form_buscar">&quot;Oops!\nNo exemplary found&quot;</string>
-    <string name="msg01_form_editar">&quot;You is not connected to internet. Please try again later!&quot;</string>
-    <string name="msg02_form_editar">&quot;Please try again later.&quot;</string>
-    <string name="msg03_form_editar">&quot;Exemplary deleted successfully!&quot;</string>
-    <string name="msg04_form_editar">&quot;Required inform the common name plant for export!&quot;</string>
-    <string name="msg05_form_editar">&quot;Choose formed the export&quot;</string>
-    <string name="msg06_form_editar">&quot;Please! enter the name of the plant before recording.&quot;</string>
-    <string name="msg07_form_editar">&quot;Plant successfully saved!&quot;</string>
-    <string name="msg08_form_editar">&quot;Some information important referent the plant were not informed!&quot;</string>
-    <string name="msg09_form_editar">&quot;File successfully generated in: ePlants!&quot;</string>
-    <string name="msg10_form_editar">&quot;Some information are missing from the file generation!&quot;</string>
-    <string name="msg11_form_editar">&quot;Please! enter the name of a plant to view the image.&quot;</string>
-    <string name="text_cabecalho_form_sobre">&quot;About APP&quot;</string>
-    <string name="text_versao_form_sobre">&quot;Version: 1.1&quot;</string>
-    <string name="text_data_form_sobre">&quot;Creation date: September 2014&quot;</string>
-    <string name="text_nome_form_sobre">&quot;Name App: ePlants&quot;</string>
-    <string name="text_dev_form_sobre">&quot;Design and development&quot;</string>
-    <string name="text_nome_dev_form_sobre">&quot;Vanderson Zanoni Campanholi&quot;</string>
-    <string name="text_email_dev_form_sobre">&quot;vando.zc@gmail.com&quot;</string>
-    <string name="text_sobre_form_sobre">&quot;About&quot;</string>
-    <string name="text01_form_sobre">&quot;        Developed in academic way with the objective application of cataloging plants and species in a simple way , with the possibility of further use of the information in catalogs and physical binders.&quot;</string>
-    <string name="text02_form_sobre">&quot;        The ePlants project contributes to students of biology and environmental courses for area have access to cataloging records and images through Google Copyright © 2014.&quot;</string>
-    <string name="text_agradece_form_sobre">&quot;Thanks&quot;</string>
-    <string name="text_agradece01_form_sobre">&quot;Teacher and MS. Luciano Antunes.&quot;</string>
-    <string name="text_agradece02_form_sobre">&quot;Teacher and Dr. Rafael Martins.&quot;</string>
-    <string name="text_sugestao_form_sobre">&quot;Suggestions and questions&quot;</string>
-    <string name="text_sugestao01_form_sobre">&quot;The app will gain new features soon. If you have any suggestions or questions this app, please send an email to:&quot;</string>
-    <string name="title_activity_teste_busca">TesteBusca</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+<!-- COnfiguração default de idioma - português(Brasil) -->
 
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    <string name="text_value_eplants">&quot; ePlants&quot;</string>
+    
+    <string name="text_value_buscar">&quot;Buscar&quot;</string>
+    <string name="text_value_cancelar">&quot;Cancelar&quot;</string>
+    <string name="text_value_excluir">&quot;Excluir&quot;</string>
+    <string name="text_value_listar">&quot;Listar&quot;</string>
+    <string name="text_value_editar">&quot;Editar&quot;</string>
+    <string name="text_value_salvar">&quot;Salvar&quot;</string>
+    
+    <string name="text_value_sobre">&quot;Sobre&quot;</string>
+    <string name="text_value_mais">&quot;Mais&quot;</string>
+    <string name="text_value_imagem">&quot;Imagem&quot;</string>
+    <string name="text_value_imagem_splash">&quot;Imagem splash&quot;</string>
+    
+    <string name="text_value_coletor">&quot;Coletor&quot;</string>
+    <string name="text_value_data_coleta">&quot;Data da coleta&quot;</string>
+    <string name="text_value_determinador">&quot;Determinador&quot;</string>
+    <string name="text_value_familia">&quot;Família&quot;</string>
+    <string name="text_value_formacao_vegetal">&quot;Formação vegetal&quot;</string>
+    <string name="text_value_local_coleta">&quot;Local da coleta&quot;</string>
+    <string name="text_value_nome_cientifico">&quot;Nome científico&quot;</string>
+    <string name="text_value_nome">&quot;Nome&quot;</string>
+    <string name="text_value_nome_comum">&quot;Nome comum&quot;</string>
+    <string name="text_value_observacao">&quot;Observação&quot;</string>
+    <string name="text_value_utilizacao">&quot;Utilização&quot;</string>
+    
+    <string name="text_value_buscar_planta">&quot;Buscar planta&quot;</string>
+    <string name="text_value_informacoes_planta">&quot;Informações da planta&quot;</string>
+    <string name="text_value_exportar_conteudo">&quot;Exportar conteúdo&quot;</string>
+    <string name="text_value_inserir_novo">&quot;Inserir novo&quot;</string>
+    
+    <string name="text_value_erro">&quot;Erro!&quot;</string>
+    
+    <string name="text_value_msg_01">&quot;Por favor! informe o nome de uma planta para a busca.&quot;</string>
+    <string name="text_value_msg_02">&quot;Oops!\nNenhum exemplar encontrado!&quot;</string>
+    <string name="text_value_msg_03">&quot;Você não está conectado a internet. Por favor tente mais tarde!&quot;</string>
+    <string name="text_value_msg_04">&quot;Exemplar excluído com sucesso!&quot;</string>
+    <string name="text_value_msg_05">&quot;Obrigatório informar o nome comum da planta para a exportação!&quot;</string>
+    <string name="text_value_msg_06">&quot;Escolha o formado de exportação&quot;</string>
+    <string name="text_value_msg_07">&quot;Por favor! informe o nome da planta antes de gravar.&quot;</string>
+    <string name="text_value_msg_08">&quot;Planta gravada com sucesso!&quot;</string>
+    <string name="text_value_msg_09">&quot;Algumas informações importantes referente a planta não foram informadas!&quot;</string>
+    <string name="text_value_msg_10">&quot;Arquivo gerado com sucesso em: ePlants!&quot;</string>
+    <string name="text_value_msg_11">&quot;Algumas informações estão faltando na geração do arquivo!&quot;</string>
+    <string name="text_value_msg_12">&quot;Por favor! informe o nome de uma planta para visualizar a imagem.&quot;</string>
+    
+    
+    <string name="text_value_sobre_app">&quot;Sobre o APP&quot;</string>
+    <string name="text_value_versao">&quot;Versão: 1.1&quot;</string>
+    <string name="text_value_data_criacao">&quot;Data de Criação Setembro 2014&quot;</string>
+    <string name="text_value_nome_app">&quot;Nome App: ePlants&quot;</string>
+    <string name="text_value_design_dev">&quot;Design e desenvolvimento&quot;</string>
+    <string name="text_value_desenvolvedor">&quot;Vanderson Zanoni Campanholi&quot;</string>
+    <string name="text_value_email_dev">&quot;vando.zc@gmail.com&quot;</string>
+    
+    <string name="text_value_paragrafo_01">&quot;        Aplicativo desenvolvido de forma acadêmica com o objetivo, de catalogar plantas e espécies da flora de forma simples, com a possibilidade de uso das informações posteriormente em catálogos e fichários físicos.&quot;</string>
+    <string name="text_value_paragrafo_02">&quot;        O projeto ePlants  contribui para que estudantes de biologia e cursos destinados a área ambiental tenham acesso a registros de catalogação e imagens através do Google Copyright © 2014.&quot;</string>
+    
+    <string name="text_value_agradecimento">&quot;Agradecimentos&quot;</string>
+	<string name="text_value_agradecimento_01">&quot;Professor e MSc. Luciano Antunes.&quot;</string>    
+ 	<string name="text_value_agradecimento_02">&quot;Professor e Dr. Rafael Martins&quot;</string>
+ 
+ 	<string name="text_value_sugestao">&quot;Sugestão e questionamentos&quot;</string>
+    <string name="text_value_sugestao_01">&quot;O app ganhará novos recursos em breve. Se você tem alguma sugestão ou questionamento sobre o app, por favor envie um email para:&quot;</string>
+    
 </resources>

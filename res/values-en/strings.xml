@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- COnfiguração para o idioma - inglês(Estados Unidos) -->
+
+<resources>
+    
+    <string name="text_value_eplants">&quot; ePlants&quot;</string>
+    
+    <string name="text_value_buscar">&quot;Search&quot;</string>
+    <string name="text_value_cancelar">&quot;Cancel&quot;</string>
+    <string name="text_value_excluir">&quot;Delete&quot;</string>
+    <string name="text_value_listar">&quot;List&quot;</string>
+    <string name="text_value_editar">&quot;Edit&quot;</string>
+    <string name="text_value_salvar">&quot;Save&quot;</string>
+    
+    <string name="text_value_sobre">&quot;About&quot;</string>
+    <string name="text_value_mais">&quot;More&quot;</string>
+    <string name="text_value_imagem">&quot;Image&quot;</string>
+    <string name="text_value_imagem_splash">&quot;Splash image&quot;</string>
+    
+    <string name="text_value_coletor">&quot;Collector&quot;</string>
+    <string name="text_value_data_coleta">&quot;Date of collection&quot;</string>
+    <string name="text_value_determinador">&quot;Determiner&quot;</string>
+    <string name="text_value_familia">&quot;Family&quot;</string>
+    <string name="text_value_formacao_vegetal">&quot;Plant formation&quot;</string>
+    <string name="text_value_local_coleta">&quot;Collection site&quot;</string>
+    <string name="text_value_nome_cientifico">&quot;Scientific name&quot;</string>
+    <string name="text_value_nome">&quot;Name&quot;</string>
+    <string name="text_value_nome_comum">&quot;Common name&quot;</string>
+    <string name="text_value_observacao">&quot;Observation&quot;</string>
+	<string name="text_value_utilizacao">&quot;Use&quot;</string>
+    
+    <string name="text_value_buscar_planta">&quot;Search Plant&quot;</string>
+    <string name="text_value_informacoes_planta">&quot;Plant Information&quot;</string>
+    <string name="text_value_exportar_conteudo">&quot;Export content&quot;</string>
+    <string name="text_value_inserir_novo">&quot;Insert new&quot;</string>
+    
+    <string name="text_value_erro">&quot;Error!&quot;</string>
+    
+    <string name="text_value_msg_01">&quot;Please! enter the name of a plant for the search.&quot;</string>
+    <string name="text_value_msg_02">&quot;Oops!\nNo exemplary found!&quot;</string>
+    <string name="text_value_msg_03">&quot;You is not connected to internet. Please try again later!&quot;</string>
+    <string name="text_value_msg_04">&quot;Exemplary deleted successfully!&quot;</string>
+    <string name="text_value_msg_05">&quot;Required inform the common name plant for export!&quot;</string>
+    <string name="text_value_msg_06">&quot;Choose formed the export&quot;</string>
+    <string name="text_value_msg_07">&quot;Please! enter the name of the plant before recording.&quot;</string>
+    <string name="text_value_msg_08">&quot;Plant successfully recorded!&quot;</string>
+    <string name="text_value_msg_09">&quot;Some information important referent the plant were not informed!&quot;</string>
+    <string name="text_value_msg_10">&quot;File successfully generated in: ePlants!&quot;</string>
+    <string name="text_value_msg_11">&quot;Some information are missing from the file generation!&quot;</string>
+    <string name="text_value_msg_12">&quot;Please! enter the name of a plant to view the image.&quot;</string>
+    <string name="text_value_sobre_app">&quot;About APP&quot;</string>
+    <string name="text_value_versao">&quot;Version: 1.1&quot;</string>
+    <string name="text_value_data_criacao">&quot;Creation date: September 2014&quot;</string>
+    <string name="text_value_nome_app">&quot;Name App: ePlants&quot;</string>
+    <string name="text_value_design_dev">&quot;Design and development&quot;</string>
+    <string name="text_value_desenvolvedor">&quot;Vanderson Zanoni Campanholi&quot;</string>
+    <string name="text_value_email_dev">&quot;vando.zc@gmail.com&quot;</string>
+    
+    <string name="text_value_paragrafo_01">&quot;        Developed in academic way with the objective application of cataloging plants and species in a simple way , with the possibility of further use of the information in catalogs and physical binders.&quot;</string>
+    <string name="text_value_paragrafo_02">&quot;        The ePlants project contributes to students of biology and environmental courses for area have access to cataloging records and images through Google Copyright © 2014.&quot;</string>
+    
+    <string name="text_value_agradecimento">&quot;Thanks&quot;</string>
+	<string name="text_value_agradecimento_01">&quot;Teacher and MS. Luciano Antunes.&quot;</string>
+    <string name="text_value_agradecimento_02">&quot;Teacher and Dr. Rafael Martins.&quot;</string>
+    
+    <string name="text_value_sugestao">&quot;Suggestions and questions&quot;</string>    
+    <string name="text_value_sugestao_01">&quot;The app will gain new features soon. If you have any suggestions or questions this app, please send an email to:&quot;</string>
+
+</resources>

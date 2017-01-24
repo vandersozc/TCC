@@ -28,9 +28,9 @@
                 android:layout_height="36dp"
                 android:layout_gravity="center"
                 android:background="@color/verde"
-                android:contentDescription="@string/text_cabecalho_form_editar"
+                android:contentDescription="@string/text_value_informacoes_planta"
                 android:gravity="center"
-                android:text="@string/text_cabecalho_form_editar"
+                android:text="@string/text_value_informacoes_planta"
                 android:textColor="@color/branco"
                 android:textSize="@dimen/text_cabecalho" />
 
@@ -40,8 +40,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_cabecalho_form_editar"
-                android:contentDescription="@string/text_nome_form_editar"
-                android:text="@string/text_nome_form_editar"
+                android:contentDescription="@string/text_value_nome"
+                android:text="@string/text_value_nome"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -51,7 +51,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_nome_form_editar"
                 android:layout_toLeftOf="@+id/ic_action_foto_form_editar"
-                android:contentDescription="@string/imput_text_nome_form_editar"
+                android:contentDescription="@string/text_value_nome"
                 android:ems="10"
                 android:gravity="center_vertical"
                 android:inputType="textCapSentences">
@@ -65,8 +65,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_nome_form_editar"
-                android:contentDescription="@string/text_nome_cientifico_form_editar"
-                android:text="@string/text_nome_cientifico_form_editar"
+                android:contentDescription="@string/text_value_nome_cientifico"
+                android:text="@string/text_value_nome_cientifico"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_nome_cientifico_form_editar"
-                android:contentDescription="@string/imput_text_nome_cientifico_form_editar"
+                android:contentDescription="@string/text_value_nome_cientifico"
                 android:ems="10"
                 android:inputType="textCapSentences" />
 
@@ -85,8 +85,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_nome_cientifico_form_editar"
-                android:contentDescription="@string/text_familia_form_editar"
-                android:text="@string/text_familia_form_editar"
+                android:contentDescription="@string/text_value_familia"
+                android:text="@string/text_value_familia"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_familia_form_editar"
-                android:contentDescription="@string/imput_text_familia_form_editar"
+                android:contentDescription="@string/text_value_familia"
                 android:ems="10"
                 android:inputType="textCapSentences" />
 
@@ -105,8 +105,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_familia_form_editar"
-                android:contentDescription="@string/text_utilizacao_form_editar"
-                android:text="@string/text_utilizacao_form_editar"
+                android:contentDescription="@string/text_value_utilizacao"
+                android:text="@string/text_value_utilizacao"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_utilizacao_form_editar"
-                android:contentDescription="@string/imput_text_utilizacao_form_editar"
+                android:contentDescription="@string/text_value_utilizacao"
                 android:ems="10"
                 android:inputType="textCapSentences" />
 
@@ -125,8 +125,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_utilizacao_form_editar"
-                android:contentDescription="@string/text_local_coleta_form_editar"
-                android:text="@string/text_local_coleta_form_editar"
+                android:contentDescription="@string/text_value_local_coleta"
+                android:text="@string/text_value_local_coleta"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -135,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_local_coleta_form_editar"
-                android:contentDescription="@string/imput_text_local_coleta_form_editar"
+                android:contentDescription="@string/text_value_local_coleta"
                 android:ems="10"
                 android:inputType="textCapSentences" />
 
@@ -145,8 +145,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_local_coleta_form_editar"
-                android:contentDescription="@string/text_coletor_form_editar"
-                android:text="@string/text_coletor_form_editar"
+                android:contentDescription="@string/text_value_coletor"
+                android:text="@string/text_value_coletor"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -155,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_coletor_form_editar"
-                android:contentDescription="@string/imput_text_coletor_form_editar"
+                android:contentDescription="@string/text_value_coletor"
                 android:ems="10"
                 android:inputType="textCapSentences" />
 
@@ -165,8 +165,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_coletor_form_editar"
-                android:contentDescription="@string/text_data_coleta_form_editar"
-                android:text="@string/text_data_coleta_form_editar"
+                android:contentDescription="@string/text_value_data_coleta"
+                android:text="@string/text_value_data_coleta"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_data_coleta_form_editar"
-                android:contentDescription="@string/imput_text_data_coleta_form_editar"
+                android:contentDescription="@string/text_value_data_coleta"
                 android:ems="10"
                 android:inputType="date" />
 
@@ -185,8 +185,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_data_coleta_form_editar"
-                android:contentDescription="@string/text_determinador_form_editar"
-                android:text="@string/text_determinador_form_editar"
+                android:contentDescription="@string/text_value_determinador"
+                android:text="@string/text_value_determinador"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -195,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_determinador_form_editar"
-                android:contentDescription="@string/imput_text_determinador_form_editar"
+                android:contentDescription="@string/text_value_determinador"
                 android:ems="10"
                 android:inputType="textCapSentences" />
 
@@ -205,8 +205,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_determinador_form_editar"
-                android:contentDescription="@string/text_formacao_vegetal_form_editar"
-                android:text="@string/text_formacao_vegetal_form_editar"
+                android:contentDescription="@string/text_value_formacao_vegetal"
+                android:text="@string/text_value_formacao_vegetal"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -215,7 +215,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_formacao_vegetal_form_editar"
-                android:contentDescription="@string/imput_text_formacao_vegetal_form_editar"
+                android:contentDescription="@string/text_value_formacao_vegetal"
                 android:ems="10"
                 android:inputType="textCapSentences" />
 
@@ -225,8 +225,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imput_text_formacao_vegetal_form_editar"
-                android:contentDescription="@string/text_observacao_form_editar"
-                android:text="@string/text_observacao_form_editar"
+                android:contentDescription="@string/text_value_observacao"
+                android:text="@string/text_value_observacao"
                 android:textColor="@color/cinza" />
 
             <EditText
@@ -235,7 +235,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_observacao_form_editar"
-                android:contentDescription="@string/imput_text_observacao_form_editar"
+                android:contentDescription="@string/text_value_observacao"
                 android:ems="10"
                 android:inputType="textCapSentences" />
 
@@ -246,7 +246,7 @@
                 android:layout_above="@+id/text_nome_cientifico_form_editar"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/text_nome_form_editar"
-                android:contentDescription="@string/ic_action_foto_form_editar"
+                android:contentDescription="@string/text_value_imagem"
                 android:src="@drawable/ic_action_foto_cinza" />
         </RelativeLayout>
     </ScrollView>
@@ -266,7 +266,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="@color/branco"
-            android:contentDescription="@string/ic_action_excluir_form_editar"
+            android:contentDescription="@string/text_value_excluir"
             android:src="@drawable/ic_action_excluir_cinza" />
 
         <ImageButton
@@ -277,7 +277,7 @@
             android:layout_marginRight="48dp"
             android:layout_toLeftOf="@+id/ic_action_excluir_form_editar"
             android:background="@color/branco"
-            android:contentDescription="@string/ic_action_cancelar_form_editar"
+            android:contentDescription="@string/text_value_cancelar"
             android:src="@drawable/ic_action_cancelar" />
 
         <ImageButton
@@ -288,7 +288,7 @@
             android:layout_marginLeft="42dp"
             android:layout_toRightOf="@+id/ic_action_excluir_form_editar"
             android:background="@color/branco"
-            android:contentDescription="@string/ic_action_salvar_form_editar"
+            android:contentDescription="@string/text_value_editar"
             android:src="@drawable/ic_action_salvar_cinza" />
     </RelativeLayout>
 

@@ -18,8 +18,8 @@
             android:layout_height="16dp"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/ic_action_mais_form_lista"
-            android:contentDescription="@string/text_nome_form_lista"
-            android:text="@string/text_nome_form_lista"
+            android:contentDescription="@string/text_value_nome"
+            android:text="@string/text_value_nome"
             android:textColor="@color/verde"
             android:textStyle="bold" />
 
@@ -31,7 +31,7 @@
             android:layout_centerVertical="false"
             android:layout_toRightOf="@+id/ic_action_mais_form_lista"
             android:background="@color/background"
-            android:contentDescription="@string/imput_text_nome_form_lista" />
+            android:contentDescription="@string/text_value_nome" />
 
         <ImageView
             android:id="@+id/ic_action_mais_form_lista"
@@ -39,7 +39,7 @@
             android:layout_height="70dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:contentDescription="@string/ic_action_mais_form_lista"
+            android:contentDescription="@string/text_value_mais"
             android:src="@drawable/ic_action_mais_form_lista" />
 
         <TextView
@@ -48,8 +48,8 @@
             android:layout_height="16dp"
             android:layout_below="@+id/imput_text_nome_form_lista"
             android:layout_toRightOf="@+id/ic_action_mais_form_lista"
-            android:contentDescription="@string/text_nome_cientifico_form_lista"
-            android:text="@string/text_nome_cientifico_form_lista"
+            android:contentDescription="@string/text_value_nome_cientifico"
+            android:text="@string/text_value_nome_cientifico"
             android:textColor="@color/verde"
             android:textStyle="bold" />
 
@@ -61,7 +61,7 @@
             android:layout_below="@+id/text_nome_cientifico_form_lista"
             android:layout_toRightOf="@+id/ic_action_mais_form_lista"
             android:background="@color/background"
-            android:contentDescription="@string/imput_text_nome_cientifico_form_lista" />
+            android:contentDescription="@string/text_value_nome_cientifico" />
 
     </RelativeLayout>
 
