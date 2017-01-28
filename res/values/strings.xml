@@ -4,20 +4,35 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     
+    <!-- Sobre o Aplicativo -->
     <string name="text_value_eplants">&quot; ePlants&quot;</string>
+    <string name="text_value_sobre_eplants">&quot;Sobre ePlants&quot;</string>
+    <string name="text_value_versao">&quot;Versão: 1.1.1&quot;</string>
+    <string name="text_value_data_criacao">&quot;Data de Criação Setembro 2014&quot;</string>
+    <string name="text_value_nome_app">&quot;Nome App: ePlants&quot;</string>
+    <string name="text_value_design_dev">&quot;Design e desenvolvimento&quot;</string>
+    <string name="text_value_desenvolvedor">&quot;Vanderson Zanoni Campanholi&quot;</string>
+    <string name="text_value_email_dev">&quot;vando.zc@gmail.com&quot;</string>
     
+    <!-- Acoes -->
     <string name="text_value_buscar">&quot;Buscar&quot;</string>
     <string name="text_value_cancelar">&quot;Cancelar&quot;</string>
     <string name="text_value_excluir">&quot;Excluir&quot;</string>
     <string name="text_value_listar">&quot;Listar&quot;</string>
     <string name="text_value_editar">&quot;Editar&quot;</string>
     <string name="text_value_salvar">&quot;Salvar&quot;</string>
+    <string name="text_value_buscar_planta">&quot;Buscar planta&quot;</string>
+    <string name="text_value_informacoes_planta">&quot;Informações da planta&quot;</string>
+    <string name="text_value_exportar_conteudo">&quot;Exportar conteúdo&quot;</string>
+    <string name="text_value_inserir_novo">&quot;Inserir novo&quot;</string>
     
-    <string name="text_value_sobre">&quot;Sobre&quot;</string>
+    <!-- Outras strings -->
+    <string name="text_value_informacoes">&quot;Informações&quot;</string>
     <string name="text_value_mais">&quot;Mais&quot;</string>
     <string name="text_value_imagem">&quot;Imagem&quot;</string>
     <string name="text_value_imagem_splash">&quot;Imagem splash&quot;</string>
     
+    <!-- Informacoes do cadastro -->
     <string name="text_value_coletor">&quot;Coletor&quot;</string>
     <string name="text_value_data_coleta">&quot;Data da coleta&quot;</string>
     <string name="text_value_determinador">&quot;Determinador&quot;</string>
@@ -29,14 +44,9 @@
     <string name="text_value_nome_comum">&quot;Nome comum&quot;</string>
     <string name="text_value_observacao">&quot;Observação&quot;</string>
     <string name="text_value_utilizacao">&quot;Utilização&quot;</string>
-    
-    <string name="text_value_buscar_planta">&quot;Buscar planta&quot;</string>
-    <string name="text_value_informacoes_planta">&quot;Informações da planta&quot;</string>
-    <string name="text_value_exportar_conteudo">&quot;Exportar conteúdo&quot;</string>
-    <string name="text_value_inserir_novo">&quot;Inserir novo&quot;</string>
 
+    <!-- Notificacoes -->
     <string name="text_value_erro">&quot;Erro!&quot;</string>
-    
     <string name="text_value_msg_01">&quot;Por favor! informe o nome de uma planta para a busca.&quot;</string>
     <string name="text_value_msg_02">&quot;Oops!\nNenhum exemplar encontrado!&quot;</string>
     <string name="text_value_msg_03">&quot;Você não está conectado a internet. Por favor tente mais tarde!&quot;</string>
@@ -50,25 +60,14 @@
     <string name="text_value_msg_11">&quot;Algumas informações estão faltando na geração do arquivo!&quot;</string>
     <string name="text_value_msg_12">&quot;Por favor! informe o nome de uma planta para visualizar a imagem.&quot;</string>
     
-    
-    <string name="text_value_sobre_app">&quot;Sobre o APP&quot;</string>
-    <string name="text_value_versao">&quot;Versão: 1.1&quot;</string>
-    <string name="text_value_data_criacao">&quot;Data de Criação Setembro 2014&quot;</string>
-    <string name="text_value_nome_app">&quot;Nome App: ePlants&quot;</string>
-    <string name="text_value_design_dev">&quot;Design e desenvolvimento&quot;</string>
-    <string name="text_value_desenvolvedor">&quot;Vanderson Zanoni Campanholi&quot;</string>
-    <string name="text_value_email_dev">&quot;vando.zc@gmail.com&quot;</string>
-    
+    <!-- Informacoes -->
     <string name="text_value_paragrafo_01">&quot;        Aplicativo desenvolvido de forma acadêmica com o objetivo, de catalogar plantas e espécies da flora de forma simples, com a possibilidade de uso das informações posteriormente em catálogos e fichários físicos.&quot;</string>
     <string name="text_value_paragrafo_02">&quot;        O projeto ePlants  contribui para que estudantes de biologia e cursos destinados a área ambiental tenham acesso a registros de catalogação e imagens através do Google Copyright © 2014.&quot;</string>
-    
     <string name="text_value_agradecimento">&quot;Agradecimentos&quot;</string>
 	<string name="text_value_agradecimento_01">&quot;Professor e MSc. Luciano Antunes.&quot;</string>    
  	<string name="text_value_agradecimento_02">&quot;Professor e Dr. Rafael Martins&quot;</string>
- 
  	<string name="text_value_sugestao">&quot;Sugestão e questionamentos&quot;</string>
     <string name="text_value_sugestao_01">&quot;O app ganhará novos recursos em breve. Se você tem alguma sugestão ou questionamento sobre o app, por favor envie um email para:&quot;</string>
-    
     
     <!-- idiomas -->
     <string name="text_value_opcoes">&quot;Opções&quot;</string>

@@ -34,16 +34,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.02"
-        android:background="@color/background_button" >
-
+        android:background="@color/verde_claro" >
+        
         <ImageButton
             android:id="@+id/ic_action_buscar_form_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignTop="@+id/ic_action_listar_form_main"
-            android:layout_marginLeft="33dp"
-            android:background="@color/cinza"
+            android:layout_marginLeft="22dp"
+            android:background="@color/verde_claro"
             android:contentDescription="@string/text_value_buscar"
             android:src="@drawable/ic_action_buscar_branco" />
 
@@ -51,10 +51,9 @@
             android:id="@+id/ic_action_listar_form_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/ic_action_salvar_form_main"
-            android:layout_marginLeft="44dp"
-            android:layout_toRightOf="@+id/ic_action_buscar_form_main"
-            android:background="@color/cinza"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/verde_claro"
             android:contentDescription="@string/text_value_listar"
             android:src="@drawable/ic_action_listar" />
 
@@ -62,23 +61,13 @@
             android:id="@+id/ic_action_salvar_form_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="28dp"
-            android:layout_toLeftOf="@+id/ic_action_sobre_form_main"
-            android:background="@color/cinza"
+            android:layout_marginRight="22dp"
+            android:background="@color/verde_claro"
             android:contentDescription="@string/text_value_salvar"
             android:src="@drawable/ic_action_salvar_branco" />
 
-        <ImageButton
-            android:id="@+id/ic_action_sobre_form_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/ic_action_salvar_form_main"
-            android:layout_marginRight="37dp"
-            android:background="@color/cinza"
-            android:contentDescription="@string/text_value_sobre"
-            android:src="@drawable/ic_action_sobre" />
     </RelativeLayout>
 
 </LinearLayout>

@@ -8,6 +8,8 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,11 +22,13 @@ import android.widget.ImageButton;
 public class Main extends Activity {
 
 	private AlertDialog alerta;
-
+	
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		setContentView(R.layout.form_main);
+		
+		setLocale(this.buscaPreferenciaIdioma());
 
 		ImageButton BotaoBuscar = (ImageButton) findViewById(R.id.ic_action_buscar_form_main);
 		BotaoBuscar.setOnClickListener(new View.OnClickListener() {
@@ -33,8 +37,7 @@ public class Main extends Activity {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, BuscarPlanta.class);
 				startActivity(intent);
-				overridePendingTransition(android.R.anim.slide_in_left,
-						android.R.anim.slide_out_right);
+				overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 
@@ -45,8 +48,7 @@ public class Main extends Activity {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, ListarPlanta.class);
 				startActivity(intent);
-				overridePendingTransition(android.R.anim.slide_in_left,
-						android.R.anim.slide_out_right);
+				overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 
@@ -57,20 +59,7 @@ public class Main extends Activity {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, EditarPlanta.class);
 				startActivity(intent);
-				overridePendingTransition(android.R.anim.slide_in_left,
-						android.R.anim.slide_out_right);
-			}
-		});
-
-		ImageButton BotaoSobre = (ImageButton) findViewById(R.id.ic_action_sobre_form_main);
-		BotaoSobre.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View view) {
-				Intent intent = new Intent();
-				intent.setClass(Main.this, Sobre.class);
-				startActivity(intent);
-				overridePendingTransition(android.R.anim.slide_in_left,
-						android.R.anim.slide_out_right);
+				overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 	}
@@ -86,20 +75,24 @@ public class Main extends Activity {
 	 public boolean onOptionsItemSelected(MenuItem menu) {
 		 switch (menu.getItemId()) {
 		 	case R.id.id_menu_idiomas:
-		 		menuEscolhaIdiomas();
+		 		abrirMenuIdiomas();
+		 		return true;
+		 	case R.id.id_value_sobre_app:
+		 		abrirMenuSobreApp();
+				return true;
 		 	default:
 		 		 return super.onOptionsItemSelected(menu);
 		 }
 	 }
 
-	private void menuEscolhaIdiomas() {
+	private void abrirMenuIdiomas() {
 		ArrayList<String> idiomas = new ArrayList<String>();
 		
 		idiomas.add(getString(R.string.text_value_idioma_portugues));
 		idiomas.add(getString(R.string.text_value_idioma_ingles));
 		idiomas.add(getString(R.string.text_value_idioma_espanhol));
 
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.xml.menu_idioma, idiomas);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.xml.opcao_idioma, idiomas);
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle(R.string.text_value_idiomas);
@@ -109,17 +102,19 @@ public class Main extends Activity {
 						switch (arg1) {
 						case 0:
 							setLocale("pt");
+							//salvaPreferenciaIdioma("pt");
 							alerta.dismiss();
 							exibeLoadingIdioma();
-							
 							break;
 						case 1:
 							setLocale("en");
+							//salvaPreferenciaIdioma("en");
 							alerta.dismiss();
 							exibeLoadingIdioma();
 							break;
 						case 2:
 							setLocale("es");
+							//salvaPreferenciaIdioma("es");
 							alerta.dismiss();
 							exibeLoadingIdioma();
 						default:
@@ -131,7 +126,16 @@ public class Main extends Activity {
 		alerta.show();
 	}
 	
-	public void setLocale(String localeName) {
+	private void abrirMenuSobreApp() {
+		Intent intent = new Intent();
+		intent.setClass(Main.this, Sobre.class);
+		startActivity(intent);
+		overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+	}
+	
+	private void setLocale(String localeName) {
+		this.salvaPreferenciaIdioma(localeName);
+		
         Locale locale = new Locale(localeName);
         Locale.setDefault(locale);
 
@@ -140,7 +144,20 @@ public class Main extends Activity {
         getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
     }
 	
-	public void exibeLoadingIdioma() {
+	private void salvaPreferenciaIdioma(String localeName) {
+		SharedPreferences userDetails = getSharedPreferences("userdetails", MODE_PRIVATE);
+		Editor edit = userDetails.edit();
+		edit.clear();
+		edit.putString("idioma", localeName);
+		edit.commit();
+	}
+	
+	private String buscaPreferenciaIdioma() {
+		SharedPreferences userDetails = getSharedPreferences("userdetails", MODE_PRIVATE);
+		return userDetails.getString("idioma", "pt");
+	}
+	
+	private void exibeLoadingIdioma() {
 		final ProgressDialog progress = ProgressDialog.show(Main.this, "", getString(R.string.text_value_atualizar_idioma), true);
 	    Runnable progressRunnable = new Runnable() {
 	        @Override

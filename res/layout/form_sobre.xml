@@ -27,9 +27,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:background="@color/verde"
-                android:contentDescription="@string/text_value_sobre_app"
+                android:contentDescription="@string/text_value_sobre_eplants"
                 android:gravity="center"
-                android:text="@string/text_value_sobre_app"
+                android:text="@string/text_value_sobre_eplants"
                 android:textColor="@color/branco"
                 android:textSize="@dimen/text_cabecalho" />
 
@@ -107,8 +107,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_email_dev_form_sobre"
                 android:layout_marginTop="16dp"
-                android:contentDescription="@string/text_value_sobre"
-                android:text="@string/text_value_sobre"
+                android:text="@string/text_value_sobre_eplants"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView

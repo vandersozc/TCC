@@ -11,13 +11,12 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int Botao_imagem=0x7f050005;
         public static final int background=0x7f050000;
-        public static final int background_button=0x7f050001;
         public static final int branco=0x7f050003;
         public static final int cinza=0x7f050004;
-        public static final int link_web=0x7f050006;
-        public static final int verde=0x7f050002;
+        public static final int link_web=0x7f050005;
+        public static final int verde=0x7f050001;
+        public static final int verde_claro=0x7f050002;
     }
     public static final class dimen {
         /** 
@@ -51,26 +50,26 @@ public final class R {
         public static final int ic_more_vert_white=0x7f02000f;
     }
     public static final class id {
-        public static final int LinearLayout01=0x7f0a004d;
-        public static final int ProgressBar_form_splash=0x7f0a004f;
-        public static final int ic_action_botaoOK_form_sobre=0x7f0a004c;
+        public static final int LinearLayout01=0x7f0a004c;
+        public static final int ProgressBar_form_splash=0x7f0a004e;
+        public static final int ic_action_botaoOK_form_sobre=0x7f0a004b;
         public static final int ic_action_buscar_form_buscar=0x7f0a0017;
         public static final int ic_action_buscar_form_main=0x7f0a0037;
         public static final int ic_action_cancelar_form_buscar=0x7f0a0016;
         public static final int ic_action_cancelar_form_editar=0x7f0a002f;
         public static final int ic_action_excluir_form_editar=0x7f0a002e;
-        public static final int ic_action_export=0x7f0a0050;
+        public static final int ic_action_export=0x7f0a004f;
         public static final int ic_action_foto_form_editar=0x7f0a001b;
         public static final int ic_action_listar_form_main=0x7f0a0038;
         public static final int ic_action_mais_form_lista=0x7f0a0032;
-        public static final int ic_action_menu_buscar=0x7f0a0052;
-        public static final int ic_action_menu_novo=0x7f0a0051;
+        public static final int ic_action_menu_buscar=0x7f0a0051;
+        public static final int ic_action_menu_novo=0x7f0a0050;
         public static final int ic_action_salvar_form_editar=0x7f0a0030;
         public static final int ic_action_salvar_form_main=0x7f0a0039;
-        public static final int ic_action_sobre_form_main=0x7f0a003a;
-        public static final int id_main_opcoes=0x7f0a0053;
-        public static final int id_menu_idiomas=0x7f0a0054;
-        public static final int imageView1=0x7f0a003c;
+        public static final int id_main_opcoes=0x7f0a0052;
+        public static final int id_menu_idiomas=0x7f0a0053;
+        public static final int id_value_sobre_app=0x7f0a0054;
+        public static final int imageView1=0x7f0a003b;
         public static final int imput_text_coletor_form_buscar=0x7f0a000d;
         public static final int imput_text_coletor_form_editar=0x7f0a0025;
         public static final int imput_text_data_coleta_form_buscar=0x7f0a000f;
@@ -93,25 +92,25 @@ public final class R {
         public static final int imput_text_observacao_form_editar=0x7f0a002d;
         public static final int imput_text_utilizacao_form_buscar=0x7f0a0009;
         public static final int imput_text_utilizacao_form_editar=0x7f0a0021;
-        public static final int relativeLayout1=0x7f0a003b;
+        public static final int relativeLayout1=0x7f0a003a;
         public static final int scrollView1=0x7f0a0000;
-        public static final int text01_form_sobre=0x7f0a0044;
-        public static final int text02_form_sobre=0x7f0a0045;
-        public static final int text_agradece01_form_sobre=0x7f0a0047;
-        public static final int text_agradece02_form_sobre=0x7f0a0048;
-        public static final int text_agradece_form_sobre=0x7f0a0046;
+        public static final int text01_form_sobre=0x7f0a0043;
+        public static final int text02_form_sobre=0x7f0a0044;
+        public static final int text_agradece01_form_sobre=0x7f0a0046;
+        public static final int text_agradece02_form_sobre=0x7f0a0047;
+        public static final int text_agradece_form_sobre=0x7f0a0045;
         public static final int text_cabecalho_form_editar=0x7f0a0018;
         public static final int text_cabecalho_form_sobre=0x7f0a0001;
         public static final int text_coletor_form_buscar=0x7f0a000c;
         public static final int text_coletor_form_editar=0x7f0a0024;
         public static final int text_data_coleta_form_buscar=0x7f0a000e;
         public static final int text_data_coleta_form_editar=0x7f0a0026;
-        public static final int text_data_form_sobre=0x7f0a003f;
+        public static final int text_data_form_sobre=0x7f0a003e;
         public static final int text_determinador_form_buscar=0x7f0a0010;
         public static final int text_determinador_form_editar=0x7f0a0028;
-        public static final int text_dev_form_sobre=0x7f0a0040;
-        public static final int text_email01_dev_form_sobre=0x7f0a004b;
-        public static final int text_email_dev_form_sobre=0x7f0a0042;
+        public static final int text_dev_form_sobre=0x7f0a003f;
+        public static final int text_email01_dev_form_sobre=0x7f0a004a;
+        public static final int text_email_dev_form_sobre=0x7f0a0041;
         public static final int text_familia_form_buscar=0x7f0a0006;
         public static final int text_familia_form_editar=0x7f0a001e;
         public static final int text_formacao_vegetal_form_buscar=0x7f0a0012;
@@ -122,20 +121,20 @@ public final class R {
         public static final int text_nome_cientifico_form_buscar=0x7f0a0004;
         public static final int text_nome_cientifico_form_editar=0x7f0a001c;
         public static final int text_nome_cientifico_form_lista=0x7f0a0034;
-        public static final int text_nome_dev_form_sobre=0x7f0a0041;
+        public static final int text_nome_dev_form_sobre=0x7f0a0040;
         public static final int text_nome_form_buscar=0x7f0a0002;
         public static final int text_nome_form_editar=0x7f0a0019;
         public static final int text_nome_form_lista=0x7f0a0031;
-        public static final int text_nome_form_sobre=0x7f0a003d;
+        public static final int text_nome_form_sobre=0x7f0a003c;
         public static final int text_observacao_form_buscar=0x7f0a0014;
         public static final int text_observacao_form_editar=0x7f0a002c;
-        public static final int text_sobre_form_sobre=0x7f0a0043;
-        public static final int text_splash_nome_app_form_splash=0x7f0a004e;
-        public static final int text_sugestao01_form_sobre=0x7f0a004a;
-        public static final int text_sugestao_form_sobre=0x7f0a0049;
+        public static final int text_sobre_form_sobre=0x7f0a0042;
+        public static final int text_splash_nome_app_form_splash=0x7f0a004d;
+        public static final int text_sugestao01_form_sobre=0x7f0a0049;
+        public static final int text_sugestao_form_sobre=0x7f0a0048;
         public static final int text_utilizacao_form_buscar=0x7f0a0008;
         public static final int text_utilizacao_form_editar=0x7f0a0020;
-        public static final int text_versao_form_sobre=0x7f0a003e;
+        public static final int text_versao_form_sobre=0x7f0a003d;
     }
     public static final class layout {
         public static final int form_buscar_planta=0x7f030000;
@@ -155,65 +154,89 @@ public final class R {
         public static final int text_value_agradecimento_01=0x7f070031;
         public static final int text_value_agradecimento_02=0x7f070032;
         public static final int text_value_atualizar_idioma=0x7f070037;
-        public static final int text_value_buscar=0x7f070001;
-        public static final int text_value_buscar_planta=0x7f070016;
-        public static final int text_value_cancelar=0x7f070002;
-        public static final int text_value_coletor=0x7f07000b;
-        public static final int text_value_data_coleta=0x7f07000c;
-        public static final int text_value_data_criacao=0x7f070029;
-        public static final int text_value_desenvolvedor=0x7f07002c;
-        public static final int text_value_design_dev=0x7f07002b;
-        public static final int text_value_determinador=0x7f07000d;
-        public static final int text_value_editar=0x7f070005;
-        public static final int text_value_email_dev=0x7f07002d;
+        /**  Acoes 
+ Acoes 
+ Acoes 
+         */
+        public static final int text_value_buscar=0x7f070008;
+        public static final int text_value_buscar_planta=0x7f07000e;
+        public static final int text_value_cancelar=0x7f070009;
+        /**  Informacoes do cadastro 
+ Informacoes do cadastro 
+ Informações do cadastro 
+         */
+        public static final int text_value_coletor=0x7f070016;
+        public static final int text_value_data_coleta=0x7f070017;
+        public static final int text_value_data_criacao=0x7f070003;
+        public static final int text_value_desenvolvedor=0x7f070006;
+        public static final int text_value_design_dev=0x7f070005;
+        public static final int text_value_determinador=0x7f070018;
+        public static final int text_value_editar=0x7f07000c;
+        public static final int text_value_email_dev=0x7f070007;
+        /**  Sobre o Aplicativo 
+ Sobre o Aplicativo 
+ Sobre o Aplicativo 
+         */
         public static final int text_value_eplants=0x7f070000;
-        public static final int text_value_erro=0x7f07001a;
-        public static final int text_value_excluir=0x7f070003;
-        public static final int text_value_exportar_conteudo=0x7f070018;
-        public static final int text_value_familia=0x7f07000e;
-        public static final int text_value_formacao_vegetal=0x7f07000f;
+        /**  Notificacoes 
+ Notificacoes 
+ Notificacoes 
+         */
+        public static final int text_value_erro=0x7f070021;
+        public static final int text_value_excluir=0x7f07000a;
+        public static final int text_value_exportar_conteudo=0x7f070010;
+        public static final int text_value_familia=0x7f070019;
+        public static final int text_value_formacao_vegetal=0x7f07001a;
         public static final int text_value_idioma_espanhol=0x7f07003a;
         public static final int text_value_idioma_ingles=0x7f070039;
         public static final int text_value_idioma_portugues=0x7f070038;
         public static final int text_value_idiomas=0x7f070036;
-        public static final int text_value_imagem=0x7f070009;
-        public static final int text_value_imagem_splash=0x7f07000a;
-        public static final int text_value_informacoes_planta=0x7f070017;
-        public static final int text_value_inserir_novo=0x7f070019;
-        public static final int text_value_listar=0x7f070004;
-        public static final int text_value_local_coleta=0x7f070010;
-        public static final int text_value_mais=0x7f070008;
-        public static final int text_value_msg_01=0x7f07001b;
-        public static final int text_value_msg_02=0x7f07001c;
-        public static final int text_value_msg_03=0x7f07001d;
-        public static final int text_value_msg_04=0x7f07001e;
-        public static final int text_value_msg_05=0x7f07001f;
-        public static final int text_value_msg_06=0x7f070020;
-        public static final int text_value_msg_07=0x7f070021;
-        public static final int text_value_msg_08=0x7f070022;
-        public static final int text_value_msg_09=0x7f070023;
-        public static final int text_value_msg_10=0x7f070024;
-        public static final int text_value_msg_11=0x7f070025;
-        public static final int text_value_msg_12=0x7f070026;
-        public static final int text_value_nome=0x7f070012;
-        public static final int text_value_nome_app=0x7f07002a;
-        public static final int text_value_nome_cientifico=0x7f070011;
-        public static final int text_value_nome_comum=0x7f070013;
-        public static final int text_value_observacao=0x7f070014;
+        public static final int text_value_imagem=0x7f070014;
+        public static final int text_value_imagem_splash=0x7f070015;
+        /**  Outras strings 
+ Outras strings 
+ Outras strings 
+         */
+        public static final int text_value_informacoes=0x7f070012;
+        public static final int text_value_informacoes_planta=0x7f07000f;
+        public static final int text_value_inserir_novo=0x7f070011;
+        public static final int text_value_listar=0x7f07000b;
+        public static final int text_value_local_coleta=0x7f07001b;
+        public static final int text_value_mais=0x7f070013;
+        public static final int text_value_msg_01=0x7f070022;
+        public static final int text_value_msg_02=0x7f070023;
+        public static final int text_value_msg_03=0x7f070024;
+        public static final int text_value_msg_04=0x7f070025;
+        public static final int text_value_msg_05=0x7f070026;
+        public static final int text_value_msg_06=0x7f070027;
+        public static final int text_value_msg_07=0x7f070028;
+        public static final int text_value_msg_08=0x7f070029;
+        public static final int text_value_msg_09=0x7f07002a;
+        public static final int text_value_msg_10=0x7f07002b;
+        public static final int text_value_msg_11=0x7f07002c;
+        public static final int text_value_msg_12=0x7f07002d;
+        public static final int text_value_nome=0x7f07001d;
+        public static final int text_value_nome_app=0x7f070004;
+        public static final int text_value_nome_cientifico=0x7f07001c;
+        public static final int text_value_nome_comum=0x7f07001e;
+        public static final int text_value_observacao=0x7f07001f;
         /**  idiomas 
  menu 
  menu 
          */
         public static final int text_value_opcoes=0x7f070035;
+        /**  Informacoes 
+ Informacoes 
+ Informacoes 
+         */
         public static final int text_value_paragrafo_01=0x7f07002e;
         public static final int text_value_paragrafo_02=0x7f07002f;
-        public static final int text_value_salvar=0x7f070006;
-        public static final int text_value_sobre=0x7f070007;
-        public static final int text_value_sobre_app=0x7f070027;
+        public static final int text_value_salvar=0x7f07000d;
+        public static final int text_value_sobre_eplants=0x7f070001;
         public static final int text_value_sugestao=0x7f070033;
         public static final int text_value_sugestao_01=0x7f070034;
-        public static final int text_value_utilizacao=0x7f070015;
-        public static final int text_value_versao=0x7f070028;
+        public static final int text_value_utilizacao=0x7f070020;
+        public static final int text_value_versao=0x7f070002;
     }
     public static final class style {
         /** 
@@ -245,6 +268,6 @@ public final class R {
     }
     public static final class xml {
         public static final int alerta_exportacao=0x7f040000;
-        public static final int menu_idioma=0x7f040001;
+        public static final int opcao_idioma=0x7f040001;
     }
 }

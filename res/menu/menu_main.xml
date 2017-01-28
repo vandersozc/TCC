@@ -9,7 +9,9 @@
         <menu>
             <item android:id="@+id/id_menu_idiomas"
                   android:title="@string/text_value_idiomas"/>
+            
+            <item android:id="@+id/id_value_sobre_app"
+                  android:title="@string/text_value_sobre_eplants"/>
         </menu>
     </item>
-
 </menu>
