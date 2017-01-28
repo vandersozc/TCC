@@ -3,7 +3,7 @@ package br.com.taprecisando.ePlantsView;
 import br.com.taprecisando.ePlantsDAO.RepositorioPlanta;
 import br.com.taprecisando.ePlantsDAO.RepositorioPlantaScript;
 import br.com.taprecisando.ePlantsModel.Planta;
-import br.com.taprecisando.ePlantsUtils.MascaraUtils;
+import br.com.taprecisando.ePlantsUtils.MaskUtils;
 import br.com.taprecisando.ePlantsView.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -52,7 +52,7 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 		campoFormacaoVegetal = (EditText) findViewById(R.id.imput_text_formacao_vegetal_form_buscar);
 		campoObservacao =      (EditText) findViewById(R.id.imput_text_observacao_form_buscar);
 		
-		campoDataColeta.addTextChangedListener(MascaraUtils.insert("##/##/####", campoDataColeta));
+		campoDataColeta.addTextChangedListener(MaskUtils.insert("##/##/####", campoDataColeta));
 		
 		ImageButton botaoBuscar = (ImageButton) findViewById(R.id.ic_action_buscar_form_buscar);
 		botaoBuscar.setOnClickListener(this);
@@ -83,30 +83,18 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 			return;
 		}
 		
-		if (planta != null) {
-			campoCientifico.setText(planta.cientifico);
-			campoFamilia.setText(planta.familia);
-			campoUtiliza.setText(planta.utiliza);
-			campoLocalColeta.setText(planta.local_coleta);
-			campoColetor.setText(planta.coletor);
-			campoDataColeta.setText(planta.data_coleta);
-			campoDeterminador.setText(planta.determinador);
-			campoFormacaoVegetal.setText(planta.formacaoVegetal);
-			campoObservacao.setText(planta.observacao);
-
-		} else {
-			campoCientifico.setText("");
-			campoFamilia.setText("");
-			campoUtiliza.setText("");
-			campoLocalColeta.setText("");
-			campoColetor.setText("");
-			campoDataColeta.setText("");
-			campoDeterminador.setText("");
-			campoFormacaoVegetal.setText("");
-			campoObservacao.setText("");
-			
-			//Msg: Oops!\nNenhum exemplar encontrado!
+		if (planta == null) { //Msg: Oops!\nNenhum exemplar encontrado!
 			Toast.makeText(BuscarPlanta.this, R.string.text_value_msg_02, Toast.LENGTH_SHORT).show();
+		} else {
+			campoCientifico.setText(planta != null ? planta.cientifico : "");
+			campoFamilia.setText(planta != null ? planta.familia : "");
+			campoUtiliza.setText(planta != null ? planta.utiliza : "");
+			campoLocalColeta.setText(planta != null ? planta.local_coleta : "");
+			campoColetor.setText(planta != null ? planta.coletor : "");
+			campoDataColeta.setText(planta != null ? planta.data_coleta : "");
+			campoDeterminador.setText(planta != null ? planta.determinador : "");
+			campoFormacaoVegetal.setText(planta != null ? planta.formacaoVegetal : "");
+			campoObservacao.setText(planta != null ? planta.observacao : "");
 		}
 	}
 

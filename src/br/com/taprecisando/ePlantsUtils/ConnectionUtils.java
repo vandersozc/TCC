@@ -4,13 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
 
-public class ConexaoUtils extends Activity {
+public class ConnectionUtils extends Activity {
 
-	public ConexaoUtils() {
+	public ConnectionUtils() {
 		super();
 	}
 
-	protected boolean isConexaoValida() {
+	protected boolean isValidConnection() {
 		ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 		
 		return conectivtyManager.getActiveNetworkInfo() != null && conectivtyManager.getActiveNetworkInfo().isAvailable()

@@ -9,9 +9,9 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 
 @SuppressLint("SdCardPath")
-public class SDcardUtils {
+public class CardUtils {
 
-	private static final String TAG = SDcardUtils.class.getName();
+	private static final String TAG = CardUtils.class.getName();
 
 	public static File getSdCardFile(String novaPasta, String arquivo) {
 		File diretorio = new File("/mnt/sdcard", novaPasta);

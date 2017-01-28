@@ -42,7 +42,7 @@
     <string name="text_value_msg_03">&quot;Usted no está conectado a internet. Por favor intentarlo más tarde!&quot;</string>
     <string name="text_value_msg_04">&quot;Ejemplar eliminado correctamente!&quot;</string>
     <string name="text_value_msg_05">&quot;Debe informar el nombre común de la planta para la exportación!&quot;</string>
-    <string name="text_value_msg_06">&quot;Elija el formato de exportación&quot;</string>
+    <string name="text_value_msg_06">&quot;Elegir el formato de exportación&quot;</string>
     <string name="text_value_msg_07">&quot;Por favor! escriba el nombre de la planta antes de la grabación.&quot;</string>
     <string name="text_value_msg_08">&quot;Planta registrado con éxito!&quot;</string>
     <string name="text_value_msg_09">&quot;Parte de la información importante con respecto a la planta no fueron informados!&quot;</string>
@@ -67,4 +67,12 @@
     <string name="text_value_sugestao">&quot;Sugerencias y preguntas&quot;</string>
     <string name="text_value_sugestao_01">&quot;La aplicación obtendrá nuevas características en breve. Si tienes alguna sugerencia o pregunta acerca de la aplicación, por favor, envíe un correo electrónico a:&quot;</string>
 
+    <!-- menu -->
+    <string name="text_value_opcoes">&quot;Options&quot;</string>
+    <string name="text_value_idiomas">&quot;Idiomas&quot;</string>
+    <string name="text_value_atualizar_idioma">&quot;lenguaje de actualización&quot;</string>
+    <string name="text_value_idioma_portugues">&quot;Portugués&quot;</string>
+    <string name="text_value_idioma_ingles">&quot;Inglés&quot;</string>
+    <string name="text_value_idioma_espanhol">&quot;español&quot;</string>
+    
 </resources>

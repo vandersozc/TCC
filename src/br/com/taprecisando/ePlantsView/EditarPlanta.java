@@ -14,9 +14,9 @@ import br.com.taprecisando.ePlantsDAO.RepositorioPlantaScript;
 import br.com.taprecisando.ePlantsExport.MontaArquivoExportacao;
 import br.com.taprecisando.ePlantsModel.Planta;
 import br.com.taprecisando.ePlantsModel.Planta.Plantas;
-import br.com.taprecisando.ePlantsUtils.ConexaoUtils;
-import br.com.taprecisando.ePlantsUtils.MascaraUtils;
-import br.com.taprecisando.ePlantsUtils.SDcardUtils;
+import br.com.taprecisando.ePlantsUtils.ConnectionUtils;
+import br.com.taprecisando.ePlantsUtils.MaskUtils;
+import br.com.taprecisando.ePlantsUtils.CardUtils;
 import br.com.taprecisando.ePlantsView.R;
 
 import android.annotation.SuppressLint;
@@ -38,7 +38,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 @SuppressLint("SimpleDateFormat")
-public class EditarPlanta extends ConexaoUtils {
+public class EditarPlanta extends ConnectionUtils {
 
 	private Long id;
 	private EditText campoNome;
@@ -79,7 +79,7 @@ public class EditarPlanta extends ConexaoUtils {
 		campoObservacao = (EditText) findViewById(R.id.imput_text_observacao_form_editar);
 		id = null;
 		
-		campoDataColeta.addTextChangedListener(MascaraUtils.insert("##/##/####", campoDataColeta));
+		campoDataColeta.addTextChangedListener(MaskUtils.insert("##/##/####", campoDataColeta));
 		
 		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 		campoDataColeta.setText(format.format(new Date()));		
@@ -108,7 +108,7 @@ public class EditarPlanta extends ConexaoUtils {
 
 			@Override
 			public void onClick(View view) {
-				if (isConexaoValida()) {
+				if (isValidConnection()) {
 					mostraImagemGoogle();
 				} else {
 					AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
@@ -192,10 +192,10 @@ public class EditarPlanta extends ConexaoUtils {
 					itens.add(".txt");
 					itens.add(".csv");
 	
-					ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.xml.alerta, itens);
+					ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.xml.alerta_exportacao, itens);
 	
 					final AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
-					mensagem.setTitle(R.string.text_value_msg_06); //Msg: Escolha o formado de exportação
+					mensagem.setTitle(R.string.text_value_msg_06); //Msg: Escolha o formato de exportação
 					mensagem.setSingleChoiceItems(adapter, 0,new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface arg0, int arg1) {
 									switch (arg1) {
@@ -294,7 +294,7 @@ public class EditarPlanta extends ConexaoUtils {
 		String NomeArquivo = strBuilder.toString();
 
 		try {
-			File f = SDcardUtils.getSdCardFile(PASTA, NomeArquivo);
+			File f = CardUtils.getSdCardFile(PASTA, NomeArquivo);
 			FileOutputStream out = new FileOutputStream(f, true);
 			
 			out.write("\n".getBytes());

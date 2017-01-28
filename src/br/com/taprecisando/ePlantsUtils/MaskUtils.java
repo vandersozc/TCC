@@ -4,7 +4,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-public abstract class MascaraUtils {
+public abstract class MaskUtils {
 	public static String unmask(String caracter) {
 		return caracter.replaceAll("[.]", "").replaceAll("[-]", "")
 					   .replaceAll("[/]", "").replaceAll("[(]", "")
@@ -18,7 +18,7 @@ public abstract class MascaraUtils {
 
 			public void onTextChanged(CharSequence sequencia, int start, int before,
 					int count) {
-				String str = MascaraUtils.unmask(sequencia.toString());
+				String str = MaskUtils.unmask(sequencia.toString());
 				String mascara = "";
 				if (isUpdating) {
 					old = str;

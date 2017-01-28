@@ -48,6 +48,7 @@ public final class R {
         public static final int ic_action_sobre=0x7f02000c;
         public static final int ic_icon=0x7f02000d;
         public static final int ic_launcher_background=0x7f02000e;
+        public static final int ic_more_vert_white=0x7f02000f;
     }
     public static final class id {
         public static final int LinearLayout01=0x7f0a004d;
@@ -67,6 +68,8 @@ public final class R {
         public static final int ic_action_salvar_form_editar=0x7f0a0030;
         public static final int ic_action_salvar_form_main=0x7f0a0039;
         public static final int ic_action_sobre_form_main=0x7f0a003a;
+        public static final int id_main_opcoes=0x7f0a0053;
+        public static final int id_menu_idiomas=0x7f0a0054;
         public static final int imageView1=0x7f0a003c;
         public static final int imput_text_coletor_form_buscar=0x7f0a000d;
         public static final int imput_text_coletor_form_editar=0x7f0a0025;
@@ -145,11 +148,13 @@ public final class R {
     public static final class menu {
         public static final int editar_planta=0x7f090000;
         public static final int listar_planta=0x7f090001;
+        public static final int menu_main=0x7f090002;
     }
     public static final class string {
         public static final int text_value_agradecimento=0x7f070030;
         public static final int text_value_agradecimento_01=0x7f070031;
         public static final int text_value_agradecimento_02=0x7f070032;
+        public static final int text_value_atualizar_idioma=0x7f070037;
         public static final int text_value_buscar=0x7f070001;
         public static final int text_value_buscar_planta=0x7f070016;
         public static final int text_value_cancelar=0x7f070002;
@@ -167,6 +172,10 @@ public final class R {
         public static final int text_value_exportar_conteudo=0x7f070018;
         public static final int text_value_familia=0x7f07000e;
         public static final int text_value_formacao_vegetal=0x7f07000f;
+        public static final int text_value_idioma_espanhol=0x7f07003a;
+        public static final int text_value_idioma_ingles=0x7f070039;
+        public static final int text_value_idioma_portugues=0x7f070038;
+        public static final int text_value_idiomas=0x7f070036;
         public static final int text_value_imagem=0x7f070009;
         public static final int text_value_imagem_splash=0x7f07000a;
         public static final int text_value_informacoes_planta=0x7f070017;
@@ -191,6 +200,11 @@ public final class R {
         public static final int text_value_nome_cientifico=0x7f070011;
         public static final int text_value_nome_comum=0x7f070013;
         public static final int text_value_observacao=0x7f070014;
+        /**  idiomas 
+ menu 
+ menu 
+         */
+        public static final int text_value_opcoes=0x7f070035;
         public static final int text_value_paragrafo_01=0x7f07002e;
         public static final int text_value_paragrafo_02=0x7f07002f;
         public static final int text_value_salvar=0x7f070006;
@@ -230,6 +244,7 @@ public final class R {
         public static final int AppTheme=0x7f080001;
     }
     public static final class xml {
-        public static final int alerta=0x7f040000;
+        public static final int alerta_exportacao=0x7f040000;
+        public static final int menu_idioma=0x7f040001;
     }
 }

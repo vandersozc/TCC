@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/id_main_opcoes"
+          android:icon="@drawable/ic_more_vert_white"
+          android:title="@string/text_value_opcoes"
+          android:showAsAction="ifRoom">
+        <!-- submenu -->
+        <menu>
+            <item android:id="@+id/id_menu_idiomas"
+                  android:title="@string/text_value_idiomas"/>
+        </menu>
+    </item>
+
+</menu>

@@ -42,7 +42,7 @@
     <string name="text_value_msg_03">&quot;You is not connected to internet. Please try again later!&quot;</string>
     <string name="text_value_msg_04">&quot;Exemplary deleted successfully!&quot;</string>
     <string name="text_value_msg_05">&quot;Required inform the common name plant for export!&quot;</string>
-    <string name="text_value_msg_06">&quot;Choose formed the export&quot;</string>
+    <string name="text_value_msg_06">&quot;Choose the export format&quot;</string>
     <string name="text_value_msg_07">&quot;Please! enter the name of the plant before recording.&quot;</string>
     <string name="text_value_msg_08">&quot;Plant successfully recorded!&quot;</string>
     <string name="text_value_msg_09">&quot;Some information important referent the plant were not informed!&quot;</string>
@@ -67,4 +67,12 @@
     <string name="text_value_sugestao">&quot;Suggestions and questions&quot;</string>    
     <string name="text_value_sugestao_01">&quot;The app will gain new features soon. If you have any suggestions or questions this app, please send an email to:&quot;</string>
 
+    <!-- menu -->
+    <string name="text_value_opcoes">&quot;Options&quot;</string>
+    <string name="text_value_idiomas">&quot;Languages&quot;</string>
+    <string name="text_value_atualizar_idioma">&quot;Updating language&quot;</string>
+    <string name="text_value_idioma_portugues">&quot;Portuguese&quot;</string>
+    <string name="text_value_idioma_ingles">&quot;English&quot;</string>
+    <string name="text_value_idioma_espanhol">&quot;Spanish&quot;</string>
+    
 </resources>

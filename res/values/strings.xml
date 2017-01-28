@@ -34,7 +34,7 @@
     <string name="text_value_informacoes_planta">&quot;Informações da planta&quot;</string>
     <string name="text_value_exportar_conteudo">&quot;Exportar conteúdo&quot;</string>
     <string name="text_value_inserir_novo">&quot;Inserir novo&quot;</string>
-    
+
     <string name="text_value_erro">&quot;Erro!&quot;</string>
     
     <string name="text_value_msg_01">&quot;Por favor! informe o nome de uma planta para a busca.&quot;</string>
@@ -42,7 +42,7 @@
     <string name="text_value_msg_03">&quot;Você não está conectado a internet. Por favor tente mais tarde!&quot;</string>
     <string name="text_value_msg_04">&quot;Exemplar excluído com sucesso!&quot;</string>
     <string name="text_value_msg_05">&quot;Obrigatório informar o nome comum da planta para a exportação!&quot;</string>
-    <string name="text_value_msg_06">&quot;Escolha o formado de exportação&quot;</string>
+    <string name="text_value_msg_06">&quot;Escolha o formato de exportação&quot;</string>
     <string name="text_value_msg_07">&quot;Por favor! informe o nome da planta antes de gravar.&quot;</string>
     <string name="text_value_msg_08">&quot;Planta gravada com sucesso!&quot;</string>
     <string name="text_value_msg_09">&quot;Algumas informações importantes referente a planta não foram informadas!&quot;</string>
@@ -68,5 +68,14 @@
  
  	<string name="text_value_sugestao">&quot;Sugestão e questionamentos&quot;</string>
     <string name="text_value_sugestao_01">&quot;O app ganhará novos recursos em breve. Se você tem alguma sugestão ou questionamento sobre o app, por favor envie um email para:&quot;</string>
+    
+    
+    <!-- idiomas -->
+    <string name="text_value_opcoes">&quot;Opções&quot;</string>
+    <string name="text_value_idiomas">&quot;Idiomas&quot;</string>
+    <string name="text_value_atualizar_idioma">&quot;Atualizando idioma&quot;</string>
+    <string name="text_value_idioma_portugues">&quot;Português&quot;</string>
+    <string name="text_value_idioma_ingles">&quot;Inglês&quot;</string>
+    <string name="text_value_idioma_espanhol">&quot;Espanhol&quot;</string>
     
 </resources>
