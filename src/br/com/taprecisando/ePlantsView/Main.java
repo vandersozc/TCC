@@ -24,11 +24,9 @@ public class Main extends Activity {
 	private AlertDialog alerta;
 	
 	@Override
-	public void onCreate(Bundle icicle) {
+	public void onCreate(Bundle icicle) {		
 		super.onCreate(icicle);
 		setContentView(R.layout.form_main);
-		
-		setLocale(this.buscaPreferenciaIdioma());
 
 		ImageButton BotaoBuscar = (ImageButton) findViewById(R.id.ic_action_buscar_form_main);
 		BotaoBuscar.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +35,7 @@ public class Main extends Activity {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, BuscarPlanta.class);
 				startActivity(intent);
-				overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+				//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 
@@ -48,7 +46,7 @@ public class Main extends Activity {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, ListarPlanta.class);
 				startActivity(intent);
-				overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+				//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 
@@ -59,7 +57,7 @@ public class Main extends Activity {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, EditarPlanta.class);
 				startActivity(intent);
-				overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+				//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 	}
@@ -102,19 +100,16 @@ public class Main extends Activity {
 						switch (arg1) {
 						case 0:
 							setLocale("pt");
-							//salvaPreferenciaIdioma("pt");
 							alerta.dismiss();
 							exibeLoadingIdioma();
 							break;
 						case 1:
 							setLocale("en");
-							//salvaPreferenciaIdioma("en");
 							alerta.dismiss();
 							exibeLoadingIdioma();
 							break;
 						case 2:
 							setLocale("es");
-							//salvaPreferenciaIdioma("es");
 							alerta.dismiss();
 							exibeLoadingIdioma();
 						default:
@@ -130,7 +125,7 @@ public class Main extends Activity {
 		Intent intent = new Intent();
 		intent.setClass(Main.this, Sobre.class);
 		startActivity(intent);
-		overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+		//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 	}
 	
 	private void setLocale(String localeName) {
@@ -162,6 +157,11 @@ public class Main extends Activity {
 	    Runnable progressRunnable = new Runnable() {
 	        @Override
 	        public void run() {
+	        	Intent intent = new Intent();
+				intent.setClass(Main.this, Main.class);
+				startActivity(intent);
+				
+				setLocale(buscaPreferenciaIdioma());
 	            progress.cancel();
 	        }
 	    };

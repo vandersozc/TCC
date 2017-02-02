@@ -211,9 +211,9 @@ public class RepositorioPlanta {
 		return queryBuilder.query(this.database, projection, selection, selectionArgs, groupBy, having,orderBy);
 	}
 
-//	public void fechar() {
-//		if (database != null) {
-//			database.close();
-//		}
-//	}
+	public void fechar() {
+		if (database != null) {
+			database.close();
+		}
+	}
 }

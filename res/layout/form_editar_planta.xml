@@ -247,6 +247,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/text_nome_form_editar"
                 android:contentDescription="@string/text_value_imagem"
+                
                 android:src="@drawable/ic_action_foto_cinza" />
         </RelativeLayout>
     </ScrollView>

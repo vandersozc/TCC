@@ -80,16 +80,16 @@ public class EditarPlanta extends ConnectionUtils {
 		id = null;
 		
 		campoDataColeta.addTextChangedListener(MaskUtils.insert("##/##/####", campoDataColeta));
-		
 		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-		campoDataColeta.setText(format.format(new Date()));		
+		campoDataColeta.setText(format.format(new Date()));
 
 		Bundle extras = getIntent().getExtras();
-
+		
 		if (extras != null) {
 			id = extras.getLong(Plantas._ID);
 			if (id != null) {
 				Planta p = buscarPlanta(id);
+
 				campoNome.setText(p.nome);
 				campoCientifico.setText(p.cientifico);
 				campoFamilia.setText(p.familia);

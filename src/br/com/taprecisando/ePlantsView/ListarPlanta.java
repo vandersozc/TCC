@@ -44,12 +44,12 @@ public class ListarPlanta extends ListActivity {
 		switch (item.getItemId()) {
 		case R.id.ic_action_menu_novo:
 			startActivityForResult(new Intent(this, EditarPlanta.class),INSERIR_EDITAR);
-			overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+			//overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 			return true;
 
 		case R.id.ic_action_menu_buscar:
 			startActivity(new Intent(this, BuscarPlanta.class));
-			overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+			//overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 			return true;
 
 		default:
@@ -69,7 +69,7 @@ public class ListarPlanta extends ListActivity {
 		it.putExtra(Plantas._ID, planta.id);
 		startActivityForResult(it, INSERIR_EDITAR);
 
-		overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+		//overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 	}
 
 	@Override
@@ -79,9 +79,10 @@ public class ListarPlanta extends ListActivity {
 			atualizarLista();
 		}
 	}
-	// @Override
-	// protected void onDestroy() {
-	// super.onDestroy();
-	// repositorio.fechar();
-	// }
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		repositorio.fechar();
+	}
 }

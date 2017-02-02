@@ -2,7 +2,7 @@
 <resources>
     <color name="background">#FFFFFF</color>
     <color name="verde">#228B22</color>
-    <color name="verde_claro">#32CD32</color>
+    <color name="verde_claro">#9ACD32</color>
     <color name="branco">#FFFFFF</color>
     <color name="cinza">#828282</color>
     <color name="link_web">#0000FF</color>

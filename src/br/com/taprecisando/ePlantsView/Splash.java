@@ -28,11 +28,10 @@ public class Splash extends Activity {
 
 				if (clickTela) {
 					finish();
-					overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+					//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 					Intent intent = new Intent();
 					intent.setClass(Splash.this, Main.class);
 					startActivity(intent);
-					overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 				}
 			}
 		};

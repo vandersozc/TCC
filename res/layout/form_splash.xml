@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/text_splash_nome_app_form_splash"
-        android:layout_width="260dp"
-        android:layout_height="120dp"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/text_value_nome"
         android:gravity="center"
         android:shadowColor="@color/cinza"
@@ -32,7 +32,6 @@
         android:fitsSystemWindows="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:max="3000" >
+        android:max="3000" />
 
-    </ProgressBar>
 </LinearLayout>

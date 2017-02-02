@@ -107,6 +107,6 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 	protected void onPause() {
 		super.onPause();
 		setResult(RESULT_CANCELED);
-		//finish();
+		finish();
 	}
 }

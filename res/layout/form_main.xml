@@ -66,8 +66,8 @@
             android:layout_marginRight="22dp"
             android:background="@color/verde_claro"
             android:contentDescription="@string/text_value_salvar"
-            android:src="@drawable/ic_action_salvar_branco" />
-
+            android:src="@drawable/ic_action_menu_novo" />
+        
     </RelativeLayout>
 
 </LinearLayout>

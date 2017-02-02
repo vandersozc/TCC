@@ -42,12 +42,11 @@ public final class R {
         public static final int ic_action_listar=0x7f020007;
         public static final int ic_action_mais_form_lista=0x7f020008;
         public static final int ic_action_menu_novo=0x7f020009;
-        public static final int ic_action_salvar_branco=0x7f02000a;
-        public static final int ic_action_salvar_cinza=0x7f02000b;
-        public static final int ic_action_sobre=0x7f02000c;
-        public static final int ic_icon=0x7f02000d;
-        public static final int ic_launcher_background=0x7f02000e;
-        public static final int ic_more_vert_white=0x7f02000f;
+        public static final int ic_action_salvar_cinza=0x7f02000a;
+        public static final int ic_action_sobre=0x7f02000b;
+        public static final int ic_icon=0x7f02000c;
+        public static final int ic_launcher_background=0x7f02000d;
+        public static final int ic_more_vert_white=0x7f02000e;
     }
     public static final class id {
         public static final int LinearLayout01=0x7f0a004c;
