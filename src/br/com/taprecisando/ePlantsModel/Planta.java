@@ -47,8 +47,8 @@ public class Planta {
 			      String data_coleta,
 			      String determinador,
 			      String formacaoVegetal,
-			      String observacao) 
-	{
+			      String observacao) {
+		
 		super();
 		
 		this.nome = 	 	   nome;
@@ -73,8 +73,8 @@ public class Planta {
 			      String data_coleta,
 			      String determinador,
 			      String formacaoVegetal,
-			      String observacao)
-	{
+			      String observacao) {
+		
 		super();
 		
 		this.id = 			   id;
@@ -103,11 +103,8 @@ public class Planta {
 		}
 
 		public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/plantas");
-
 		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.google.plantas";
-
 		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.google.plantas";
-
 		public static final String DEFAULT_SORT_ORDER = "_id ASC";
 
 		public static final String NOME = 		 	 "nome";
