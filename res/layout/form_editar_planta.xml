@@ -246,9 +246,10 @@
                 android:layout_above="@+id/text_nome_cientifico_form_editar"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/text_nome_form_editar"
+                android:background="@drawable/ic_find_in_page_black"
                 android:contentDescription="@string/text_value_imagem"
-                
-                android:src="@drawable/ic_action_foto_cinza" />
+                android:src="@drawable/ic_find_in_page_black" />
+
         </RelativeLayout>
     </ScrollView>
 
@@ -268,10 +269,10 @@
             android:layout_centerVertical="true"
             android:background="@color/branco"
             android:contentDescription="@string/text_value_excluir"
-            android:src="@drawable/ic_action_excluir_cinza" />
+            android:src="@drawable/ic_delete_black" />
 
         <ImageButton
-            android:id="@+id/ic_action_cancelar_form_editar"
+            android:id="@+id/ic_cancel_black_form_editar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/ic_action_excluir_form_editar"
@@ -279,7 +280,7 @@
             android:layout_toLeftOf="@+id/ic_action_excluir_form_editar"
             android:background="@color/branco"
             android:contentDescription="@string/text_value_cancelar"
-            android:src="@drawable/ic_action_cancelar" />
+            android:src="@drawable/ic_cancel_black" />
 
         <ImageButton
             android:id="@+id/ic_action_salvar_form_editar"
@@ -290,7 +291,7 @@
             android:layout_toRightOf="@+id/ic_action_excluir_form_editar"
             android:background="@color/branco"
             android:contentDescription="@string/text_value_editar"
-            android:src="@drawable/ic_action_salvar_cinza" />
+            android:src="@drawable/ic_save_black" />
     </RelativeLayout>
 
 </RelativeLayout>

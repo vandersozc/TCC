@@ -21,13 +21,13 @@
     <application
         android:allowBackup="true"
         android:debuggable="false"
-        android:icon="@drawable/ic_icon"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/text_value_eplants"
         android:theme="@style/AppTheme" >
         <activity
             android:name="Splash"
             android:configChanges="orientation"
-            android:icon="@drawable/ic_icon"
+            android:icon="@drawable/ic_launcher"
             android:label="@string/text_value_eplants"
             android:screenOrientation="portrait"
             android:theme="@style/AppBaseTheme" >
@@ -40,7 +40,7 @@
         <activity
             android:name="Main"
             android:configChanges="orientation"
-            android:icon="@drawable/ic_icon"
+            android:icon="@drawable/ic_launcher"
             android:label="@string/text_value_eplants"
             android:multiprocess="true"
             android:screenOrientation="portrait"
@@ -48,13 +48,13 @@
         </activity>
         <activity
             android:name="EditarPlanta"
-            android:icon="@drawable/ic_icon"
+            android:icon="@drawable/ic_launcher"
             android:label="@string/text_value_eplants"
             android:theme="@style/AppBaseTheme" >
         </activity>
         <activity
             android:name="BuscarPlanta"
-            android:icon="@drawable/ic_icon"
+            android:icon="@drawable/ic_launcher"
             android:label="@string/text_value_eplants"
             android:theme="@style/AppBaseTheme" >
         </activity>

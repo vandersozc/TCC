@@ -57,7 +57,7 @@ public class BuscarPlanta extends Activity implements OnClickListener {
 		ImageButton botaoBuscar = (ImageButton) findViewById(R.id.ic_action_buscar_form_buscar);
 		botaoBuscar.setOnClickListener(this);
 
-		ImageButton botaoCancelar = (ImageButton) findViewById(R.id.ic_action_cancelar_form_buscar);
+		ImageButton botaoCancelar = (ImageButton) findViewById(R.id.ic_cancel_black_form_buscar);
 		botaoCancelar.setOnClickListener(new OnClickListener() {
 			public void onClick(View view) {
 				setResult(RESULT_CANCELED);

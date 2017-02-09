@@ -42,14 +42,12 @@ public class ListarPlanta extends ListActivity {
 
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.ic_action_menu_novo:
+		case R.id.ic_add_box_white:
 			startActivityForResult(new Intent(this, EditarPlanta.class),INSERIR_EDITAR);
-			//overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 			return true;
 
 		case R.id.ic_action_menu_buscar:
 			startActivity(new Intent(this, BuscarPlanta.class));
-			//overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 			return true;
 
 		default:
@@ -68,8 +66,6 @@ public class ListarPlanta extends ListActivity {
 		Intent it = new Intent(this, EditarPlanta.class);
 		it.putExtra(Plantas._ID, planta.id);
 		startActivityForResult(it, INSERIR_EDITAR);
-
-		//overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 	}
 
 	@Override

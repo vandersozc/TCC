@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/ic_action_menu_novo"
-        android:icon="@drawable/ic_action_menu_novo"
+        android:id="@+id/ic_add_box_white"
+        android:icon="@drawable/ic_add_box_white"
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
         android:title="@string/text_value_inserir_novo">
     </item>
     <item
         android:id="@+id/ic_action_menu_buscar"
-        android:icon="@drawable/ic_action_buscar_branco"
+        android:icon="@drawable/ic_search_white"
         android:orderInCategory="101"
         android:showAsAction="ifRoom"
         android:title="@string/text_value_buscar">

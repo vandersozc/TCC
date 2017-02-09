@@ -126,7 +126,7 @@ public class EditarPlanta extends ConnectionUtils {
 			}
 		});
 
-		ImageButton botaoCancelar = (ImageButton) findViewById(R.id.ic_action_cancelar_form_editar);
+		ImageButton botaoCancelar = (ImageButton) findViewById(R.id.ic_cancel_black_form_editar);
 		botaoCancelar.setOnClickListener(new OnClickListener() {
 			public void onClick(View view) {
 				setResult(RESULT_CANCELED);
@@ -174,7 +174,7 @@ public class EditarPlanta extends ConnectionUtils {
 		planta.observacao = 	 campoObservacao.getText().toString().trim();
 		
 		switch (item.getItemId()) {
-			case R.id.ic_action_export:
+			case R.id.ic_import_export_white:
 	
 				if (planta.nome.equals("")) {
 					AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);

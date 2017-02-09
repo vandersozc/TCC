@@ -35,18 +35,16 @@ public class Main extends Activity {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, BuscarPlanta.class);
 				startActivity(intent);
-				//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 
-		ImageButton BotaoListar = (ImageButton) findViewById(R.id.ic_action_listar_form_main);
+		ImageButton BotaoListar = (ImageButton) findViewById(R.id.ic_view_list_white_form_main);
 		BotaoListar.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View view) {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, ListarPlanta.class);
 				startActivity(intent);
-				//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 
@@ -57,7 +55,6 @@ public class Main extends Activity {
 				Intent intent = new Intent();
 				intent.setClass(Main.this, EditarPlanta.class);
 				startActivity(intent);
-				//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
 	}
@@ -125,7 +122,6 @@ public class Main extends Activity {
 		Intent intent = new Intent();
 		intent.setClass(Main.this, Sobre.class);
 		startActivity(intent);
-		//overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 	}
 	
 	private void setLocale(String localeName) {

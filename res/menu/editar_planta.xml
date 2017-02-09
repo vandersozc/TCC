@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
    
     <item
-        android:id="@+id/ic_action_export"
-        android:icon="@drawable/ic_action_export"
+        android:id="@+id/ic_import_export_white"
+        android:icon="@drawable/ic_import_export_white"
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
         android:title="@string/text_value_exportar_conteudo">

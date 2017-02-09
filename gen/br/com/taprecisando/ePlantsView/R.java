@@ -32,21 +32,19 @@ public final class R {
         public static final int text_cabecalho=0x7f060000;
     }
     public static final class drawable {
-        public static final int ic_action_buscar_branco=0x7f020000;
-        public static final int ic_action_buscar_cinza=0x7f020001;
-        public static final int ic_action_cancelar=0x7f020002;
-        public static final int ic_action_excluir_branco=0x7f020003;
-        public static final int ic_action_excluir_cinza=0x7f020004;
-        public static final int ic_action_export=0x7f020005;
-        public static final int ic_action_foto_cinza=0x7f020006;
-        public static final int ic_action_listar=0x7f020007;
-        public static final int ic_action_mais_form_lista=0x7f020008;
-        public static final int ic_action_menu_novo=0x7f020009;
-        public static final int ic_action_salvar_cinza=0x7f02000a;
-        public static final int ic_action_sobre=0x7f02000b;
-        public static final int ic_icon=0x7f02000c;
-        public static final int ic_launcher_background=0x7f02000d;
-        public static final int ic_more_vert_white=0x7f02000e;
+        public static final int ic_add_box_white=0x7f020000;
+        public static final int ic_cancel_black=0x7f020001;
+        public static final int ic_content_paste_black=0x7f020002;
+        public static final int ic_delete_black=0x7f020003;
+        public static final int ic_find_in_page_black=0x7f020004;
+        public static final int ic_import_export_white=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int ic_launcher_background=0x7f020007;
+        public static final int ic_more_vert_white=0x7f020008;
+        public static final int ic_save_black=0x7f020009;
+        public static final int ic_search_black=0x7f02000a;
+        public static final int ic_search_white=0x7f02000b;
+        public static final int ic_view_list_white=0x7f02000c;
     }
     public static final class id {
         public static final int LinearLayout01=0x7f0a004c;
@@ -54,17 +52,17 @@ public final class R {
         public static final int ic_action_botaoOK_form_sobre=0x7f0a004b;
         public static final int ic_action_buscar_form_buscar=0x7f0a0017;
         public static final int ic_action_buscar_form_main=0x7f0a0037;
-        public static final int ic_action_cancelar_form_buscar=0x7f0a0016;
-        public static final int ic_action_cancelar_form_editar=0x7f0a002f;
         public static final int ic_action_excluir_form_editar=0x7f0a002e;
-        public static final int ic_action_export=0x7f0a004f;
         public static final int ic_action_foto_form_editar=0x7f0a001b;
-        public static final int ic_action_listar_form_main=0x7f0a0038;
-        public static final int ic_action_mais_form_lista=0x7f0a0032;
         public static final int ic_action_menu_buscar=0x7f0a0051;
-        public static final int ic_action_menu_novo=0x7f0a0050;
         public static final int ic_action_salvar_form_editar=0x7f0a0030;
         public static final int ic_action_salvar_form_main=0x7f0a0039;
+        public static final int ic_add_box_white=0x7f0a0050;
+        public static final int ic_cancel_black_form_buscar=0x7f0a0016;
+        public static final int ic_cancel_black_form_editar=0x7f0a002f;
+        public static final int ic_content_paste_black=0x7f0a0032;
+        public static final int ic_import_export_white=0x7f0a004f;
+        public static final int ic_view_list_white_form_main=0x7f0a0038;
         public static final int id_main_opcoes=0x7f0a0052;
         public static final int id_menu_idiomas=0x7f0a0053;
         public static final int id_value_sobre_app=0x7f0a0054;
