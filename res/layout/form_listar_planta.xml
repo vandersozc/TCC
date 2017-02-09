@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/text_nome_form_lista"
             android:layout_width="match_parent"
-            android:layout_height="16dp"
+            android:layout_height="18dp"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/ic_content_paste_black"
             android:contentDescription="@string/text_value_nome"
@@ -25,7 +25,7 @@
 
         <TextView
             android:id="@+id/imput_text_nome_form_lista"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_below="@+id/text_nome_form_lista"
             android:layout_centerVertical="false"
@@ -45,7 +45,7 @@
         <TextView
             android:id="@+id/text_nome_cientifico_form_lista"
             android:layout_width="match_parent"
-            android:layout_height="16dp"
+            android:layout_height="18dp"
             android:layout_below="@+id/imput_text_nome_form_lista"
             android:layout_toRightOf="@+id/ic_content_paste_black"
             android:contentDescription="@string/text_value_nome_cientifico"
@@ -55,7 +55,7 @@
 
         <TextView
             android:id="@+id/imput_text_nome_cientifico_form_lista"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/text_nome_cientifico_form_lista"

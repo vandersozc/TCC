@@ -99,8 +99,7 @@ public class RepositorioPlantaScript extends RepositorioPlanta {
 		"insert into planta(nome,cientifico,familia,utiliza,local_coleta,coletor,data_coleta,determinador,formacaoVegetal,observacao)values('Vassourão branco','Cordyline dracaenoides','Asteraceae','','','','05-10-2014','','','');",
 		"insert into planta(nome,cientifico,familia,utiliza,local_coleta,coletor,data_coleta,determinador,formacaoVegetal,observacao)values('Vassourão preto','Piptocarpha angustifolia','Asteraceae','','','','05-10-2014','','','');",
 		"insert into planta(nome,cientifico,familia,utiliza,local_coleta,coletor,data_coleta,determinador,formacaoVegetal,observacao)values('Vassoura vermelha','Vernonia discolor','Sapindaceae','','','','05-10-2014','','','');"
-		
-};
+	};
 	
 	private static final String NOME_BANCO = "ePlantsDB";
 	private static final int VERSAO_BANCO = 1;
@@ -115,11 +114,11 @@ public class RepositorioPlantaScript extends RepositorioPlanta {
 		database = dbHelper.getWritableDatabase();
 	}
 	 
-//	 @Override
-//	 public void fechar() {
-//		 super.fechar();
-//		 if (dbHelper != null) {
-//			 dbHelper.close();
-//		 }
-//	 }
+	 @Override
+	 public void fechar() {
+		 super.fechar();
+		 if (dbHelper != null) {
+			 dbHelper.close();
+		 }
+	 }
 }

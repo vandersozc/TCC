@@ -3,11 +3,8 @@ package br.com.taprecisando.ePlantsDAO;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 class SQLiteHelper extends SQLiteOpenHelper {
-
-	private static final String CATEGORIA = "dados";
 
 	private String[] scriptSQLCreate;
 	private String scriptSQLDelete;
@@ -21,10 +18,7 @@ class SQLiteHelper extends SQLiteOpenHelper {
 	 * @param scriptSQLCreate SQL com o create table..
 	 * @param scriptSQLDelete SQL com o drop table...
 	 */
-	SQLiteHelper(Context context,
-			     String nomeBanco, 
-			     int versaoBanco, 
-			     String[] scriptSQLCreate, 
+	SQLiteHelper(Context context, String nomeBanco, int versaoBanco, String[] scriptSQLCreate, 
 			     String scriptSQLDelete) {
 		
 		super(context, nomeBanco, null, versaoBanco);
@@ -39,18 +33,14 @@ class SQLiteHelper extends SQLiteOpenHelper {
 
 		for (int i = 0; i < qtdeScripts; i++) {
 			String sql = scriptSQLCreate[i];
-			Log.i(CATEGORIA, sql);
+
 			db.execSQL(sql);
 		}
 	}
 
 	@Override
-	public void onUpgrade(SQLiteDatabase db, int versaoAntiga, int novaVersao) {
-		
-		Log.w(CATEGORIA, "Atualizando da versão " + versaoAntiga + " para " + novaVersao + ". Todos os registros serão deletados.");
-		Log.i(CATEGORIA, scriptSQLDelete);
-		db.execSQL(scriptSQLDelete);
-		onCreate(db);
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		//db.execSQL(scriptSQLDelete);
+		//onCreate(db);
 	}
-
 }

@@ -38,13 +38,14 @@ public final class R {
         public static final int ic_delete_black=0x7f020003;
         public static final int ic_find_in_page_black=0x7f020004;
         public static final int ic_import_export_white=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int ic_launcher_background=0x7f020007;
-        public static final int ic_more_vert_white=0x7f020008;
-        public static final int ic_save_black=0x7f020009;
-        public static final int ic_search_black=0x7f02000a;
-        public static final int ic_search_white=0x7f02000b;
-        public static final int ic_view_list_white=0x7f02000c;
+        public static final int ic_keyboard_backspace_white=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int ic_launcher_background=0x7f020008;
+        public static final int ic_more_vert_white=0x7f020009;
+        public static final int ic_save_black=0x7f02000a;
+        public static final int ic_search_black=0x7f02000b;
+        public static final int ic_search_white=0x7f02000c;
+        public static final int ic_view_list_white=0x7f02000d;
     }
     public static final class id {
         public static final int LinearLayout01=0x7f0a004c;
@@ -147,28 +148,28 @@ public final class R {
         public static final int menu_main=0x7f090002;
     }
     public static final class string {
-        public static final int text_value_agradecimento=0x7f070030;
-        public static final int text_value_agradecimento_01=0x7f070031;
-        public static final int text_value_agradecimento_02=0x7f070032;
-        public static final int text_value_atualizar_idioma=0x7f070037;
+        public static final int text_value_agradecimento=0x7f070032;
+        public static final int text_value_agradecimento_01=0x7f070033;
+        public static final int text_value_agradecimento_02=0x7f070034;
+        public static final int text_value_atualizar_idioma=0x7f070039;
         /**  Acoes 
  Acoes 
  Acoes 
          */
         public static final int text_value_buscar=0x7f070008;
-        public static final int text_value_buscar_planta=0x7f07000e;
+        public static final int text_value_buscar_planta=0x7f07000f;
         public static final int text_value_cancelar=0x7f070009;
         /**  Informacoes do cadastro 
  Informacoes do cadastro 
  Informações do cadastro 
          */
-        public static final int text_value_coletor=0x7f070016;
-        public static final int text_value_data_coleta=0x7f070017;
+        public static final int text_value_coletor=0x7f070018;
+        public static final int text_value_data_coleta=0x7f070019;
         public static final int text_value_data_criacao=0x7f070003;
         public static final int text_value_desenvolvedor=0x7f070006;
         public static final int text_value_design_dev=0x7f070005;
-        public static final int text_value_determinador=0x7f070018;
-        public static final int text_value_editar=0x7f07000c;
+        public static final int text_value_determinador=0x7f07001a;
+        public static final int text_value_editar=0x7f07000d;
         public static final int text_value_email_dev=0x7f070007;
         /**  Sobre o Aplicativo 
  Sobre o Aplicativo 
@@ -179,61 +180,63 @@ public final class R {
  Notificacoes 
  Notificacoes 
          */
-        public static final int text_value_erro=0x7f070021;
+        public static final int text_value_erro=0x7f070023;
         public static final int text_value_excluir=0x7f07000a;
-        public static final int text_value_exportar_conteudo=0x7f070010;
-        public static final int text_value_familia=0x7f070019;
-        public static final int text_value_formacao_vegetal=0x7f07001a;
-        public static final int text_value_idioma_espanhol=0x7f07003a;
-        public static final int text_value_idioma_ingles=0x7f070039;
-        public static final int text_value_idioma_portugues=0x7f070038;
-        public static final int text_value_idiomas=0x7f070036;
-        public static final int text_value_imagem=0x7f070014;
-        public static final int text_value_imagem_splash=0x7f070015;
+        public static final int text_value_excluir_pergunta=0x7f07000b;
+        public static final int text_value_exportar_conteudo=0x7f070011;
+        public static final int text_value_familia=0x7f07001b;
+        public static final int text_value_formacao_vegetal=0x7f07001c;
+        public static final int text_value_idioma_espanhol=0x7f07003c;
+        public static final int text_value_idioma_ingles=0x7f07003b;
+        public static final int text_value_idioma_portugues=0x7f07003a;
+        public static final int text_value_idiomas=0x7f070038;
+        public static final int text_value_imagem=0x7f070016;
+        public static final int text_value_imagem_splash=0x7f070017;
         /**  Outras strings 
  Outras strings 
  Outras strings 
          */
-        public static final int text_value_informacoes=0x7f070012;
-        public static final int text_value_informacoes_planta=0x7f07000f;
-        public static final int text_value_inserir_novo=0x7f070011;
-        public static final int text_value_listar=0x7f07000b;
-        public static final int text_value_local_coleta=0x7f07001b;
-        public static final int text_value_mais=0x7f070013;
-        public static final int text_value_msg_01=0x7f070022;
-        public static final int text_value_msg_02=0x7f070023;
-        public static final int text_value_msg_03=0x7f070024;
-        public static final int text_value_msg_04=0x7f070025;
-        public static final int text_value_msg_05=0x7f070026;
-        public static final int text_value_msg_06=0x7f070027;
-        public static final int text_value_msg_07=0x7f070028;
-        public static final int text_value_msg_08=0x7f070029;
-        public static final int text_value_msg_09=0x7f07002a;
-        public static final int text_value_msg_10=0x7f07002b;
-        public static final int text_value_msg_11=0x7f07002c;
-        public static final int text_value_msg_12=0x7f07002d;
-        public static final int text_value_nome=0x7f07001d;
+        public static final int text_value_informacoes=0x7f070014;
+        public static final int text_value_informacoes_planta=0x7f070010;
+        public static final int text_value_inserir_novo=0x7f070012;
+        public static final int text_value_listar=0x7f07000c;
+        public static final int text_value_local_coleta=0x7f07001d;
+        public static final int text_value_mais=0x7f070015;
+        public static final int text_value_msg_01=0x7f070024;
+        public static final int text_value_msg_02=0x7f070025;
+        public static final int text_value_msg_03=0x7f070026;
+        public static final int text_value_msg_04=0x7f070027;
+        public static final int text_value_msg_05=0x7f070028;
+        public static final int text_value_msg_06=0x7f070029;
+        public static final int text_value_msg_07=0x7f07002a;
+        public static final int text_value_msg_08=0x7f07002b;
+        public static final int text_value_msg_09=0x7f07002c;
+        public static final int text_value_msg_10=0x7f07002d;
+        public static final int text_value_msg_11=0x7f07002e;
+        public static final int text_value_msg_12=0x7f07002f;
+        public static final int text_value_nome=0x7f07001f;
         public static final int text_value_nome_app=0x7f070004;
-        public static final int text_value_nome_cientifico=0x7f07001c;
-        public static final int text_value_nome_comum=0x7f07001e;
-        public static final int text_value_observacao=0x7f07001f;
+        public static final int text_value_nome_cientifico=0x7f07001e;
+        public static final int text_value_nome_comum=0x7f070020;
+        public static final int text_value_observacao=0x7f070021;
         /**  idiomas 
  menu 
  menu 
          */
-        public static final int text_value_opcoes=0x7f070035;
+        public static final int text_value_opcoes=0x7f070037;
         /**  Informacoes 
  Informacoes 
  Informacoes 
          */
-        public static final int text_value_paragrafo_01=0x7f07002e;
-        public static final int text_value_paragrafo_02=0x7f07002f;
-        public static final int text_value_salvar=0x7f07000d;
+        public static final int text_value_paragrafo_01=0x7f070030;
+        public static final int text_value_paragrafo_02=0x7f070031;
+        public static final int text_value_salvar=0x7f07000e;
         public static final int text_value_sobre_eplants=0x7f070001;
-        public static final int text_value_sugestao=0x7f070033;
-        public static final int text_value_sugestao_01=0x7f070034;
-        public static final int text_value_utilizacao=0x7f070020;
+        public static final int text_value_sugestao=0x7f070035;
+        public static final int text_value_sugestao_01=0x7f070036;
+        public static final int text_value_utilizacao=0x7f070022;
         public static final int text_value_versao=0x7f070002;
+        public static final int text_value_voltar=0x7f070013;
     }
     public static final class style {
         /** 

@@ -111,16 +111,15 @@ public class EditarPlanta extends ConnectionUtils {
 				if (isValidConnection()) {
 					mostraImagemGoogle();
 				} else {
-					AlertDialog.Builder mensagem = new AlertDialog.Builder(EditarPlanta.this);
-					mensagem.setTitle(R.string.text_value_erro); //Msg: Erro!
-					mensagem.setMessage(R.string.text_value_msg_03);//Msg: Você não está conectado a internet!Por favor tente mais tarde.
-					mensagem.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+					AlertDialog.Builder builder = new AlertDialog.Builder(EditarPlanta.this);
+					builder.setTitle("Oops!");
+					builder.setMessage(R.string.text_value_msg_03);//Msg: Você não está conectado a internet!Por favor tente mais tarde.
+					builder.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog,
 								int whichButton) {
-							// EditarPlanta.this.finish();
 						}
 					});
-					mensagem.show();
+					builder.show();
 					return;
 				}
 			}
@@ -147,8 +146,23 @@ public class EditarPlanta extends ConnectionUtils {
 		} else {
 			botaoExcluir.setOnClickListener(new OnClickListener() {
 				public void onClick(View view) {
-					excluir();
-					Toast.makeText(EditarPlanta.this, R.string.text_value_msg_04, Toast.LENGTH_SHORT).show();//Msg: Exemplar excluído com sucesso!
+
+					AlertDialog.Builder builder = new AlertDialog.Builder(EditarPlanta.this);
+					builder.setTitle(R.string.text_value_excluir_pergunta); //Msg: Excluir?
+			        builder.setMessage(campoNome.getText())
+			               .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+			                   public void onClick(DialogInterface dialog, int id) {
+			                	   excluir();
+			   						Toast.makeText(EditarPlanta.this, R.string.text_value_msg_04, Toast.LENGTH_SHORT).show();//Msg: Exemplar excluído com sucesso!
+			                   }
+			               })
+			               .setNegativeButton(R.string.text_value_cancelar, new DialogInterface.OnClickListener() {
+			                   public void onClick(DialogInterface dialog, int id) {
+			                       return;
+			                   }
+			               });
+			        builder.show();
+			        return;
 				}
 			});
 		}
@@ -372,6 +386,6 @@ public class EditarPlanta extends ConnectionUtils {
 	protected void onPause() {
 		super.onPause();
 		setResult(RESULT_CANCELED);
-		// finish();
+	    finish();
 	}
 }

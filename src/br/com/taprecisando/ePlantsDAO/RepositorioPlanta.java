@@ -87,7 +87,6 @@ public class RepositorioPlanta {
 	public int atualizar(ContentValues valores, String where, String[] whereArgs) {
 		int count = database.update(NOME_TABELA, valores, where, whereArgs);
 		
-		Log.i(CATEGORIA, "Atualizou [" + count + "] registros");
 		return count;
 	}
 
@@ -102,7 +101,7 @@ public class RepositorioPlanta {
 
 	public int deletar(String where, String[] whereArgs) {
 		int count = database.delete(NOME_TABELA, where, whereArgs);
-		Log.i(CATEGORIA, "Deletou [" + count + "] registros");
+
 		return count;
 	}
 

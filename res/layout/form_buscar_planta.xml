@@ -255,7 +255,7 @@
             android:layout_marginLeft="57dp"
             android:background="@color/branco"
             android:contentDescription="@string/text_value_cancelar"
-            android:src="@drawable/ic_cancel_black" />
+            android:src="@drawable/ic_cancel_black"/>
 
         <ImageButton
             android:id="@+id/ic_action_buscar_form_buscar"

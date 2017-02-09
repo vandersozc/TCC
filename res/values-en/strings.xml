@@ -18,6 +18,7 @@
     <string name="text_value_buscar">&quot;Search&quot;</string>
     <string name="text_value_cancelar">&quot;Cancel&quot;</string>
     <string name="text_value_excluir">&quot;Delete&quot;</string>
+    <string name="text_value_excluir_pergunta">&quot;Delete?&quot;</string>
     <string name="text_value_listar">&quot;List&quot;</string>
     <string name="text_value_editar">&quot;Edit&quot;</string>
     <string name="text_value_salvar">&quot;Save&quot;</string>
@@ -25,6 +26,7 @@
     <string name="text_value_informacoes_planta">&quot;Plant Information&quot;</string>
     <string name="text_value_exportar_conteudo">&quot;Export content&quot;</string>
     <string name="text_value_inserir_novo">&quot;Insert new&quot;</string>
+    <string name="text_value_voltar">&quot;Come back&quot;</string>
     
     <!-- Outras strings -->
     <string name="text_value_informacoes">&quot;Information&quot;</string>
